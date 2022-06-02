@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--secondary-clr);
+    background: var(--tertiary-clr);
     margin-top: 100px
 }
 

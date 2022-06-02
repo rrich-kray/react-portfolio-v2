@@ -1,6 +1,6 @@
 #projects {
     width: 100vw;
-    height: 100 vh;
+    height: 90vh;
     display: flex;
     margin-top: 100px
 }
@@ -23,8 +23,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* height: 100%; */
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     padding-left: 100px;
     padding-right: 100px;
 }

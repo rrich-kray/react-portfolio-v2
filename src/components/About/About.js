@@ -88,7 +88,35 @@ const About = () => {
               technologies across the entire MERN stack, and I am driven forward
               by the prospect of developing unique solutions to unique problems.
             </p>
-            <button>Learn More</button>
+            <div id="gh-linkedin-container">
+              <a href="https://github.com/rrich-kray/" alt="github-link">
+                <img
+                  src={require("./gh.svg").default}
+                  alt="gh-icon"
+                  style={{ height: "75px", padding: "10px;" }}
+                ></img>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ryankray/"
+                alt="linkedIn-link"
+              >
+                <img
+                  src={require("./linkedin.svg").default}
+                  alt="linkedIn-icon"
+                  style={{ height: "75px", padding: "10px" }}
+                ></img>
+              </a>
+              <a
+                href="https://docs.google.com/document/d/1gzlYNrQPsWXRgWO9sgm8WkaF6DgDphDc/edit?usp=sharing&ouid=108149335393344460606&rtpof=true&sd=true"
+                alt="linkedIn-link"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/262734/curriculum-vitae-resume.svg"
+                  alt="resume-icon"
+                  style={{ height: "75px", padding: "10px" }}
+                ></img>
+              </a>
+            </div>
           </div>
         </div>
       </div>
