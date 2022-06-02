@@ -1,0 +1,30 @@
+#projects {
+    width: 100vw;
+    height: 100 vh;
+    display: flex;
+    margin-top: 100px
+}
+
+#projects-container-left {
+    flex: 1;
+    height: 100%
+}
+
+#projects-container-left :nth-child(1) {
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+#projects-container-right {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* height: 100%; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-left: 100px;
+    padding-right: 100px;
+}
