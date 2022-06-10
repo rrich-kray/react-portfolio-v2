@@ -8,7 +8,9 @@ const Hero = () => {
         <div>
           <h1 style={{ color: "white" }}>Let's Build Something Great</h1>
           <p style={{ color: "white" }}>I make cool things</p>
-          <button>Learn More</button>
+          <button>
+            <a href="#about">Learn More</a>
+          </button>
         </div>
       </div>
       <div id="hero-container-right">

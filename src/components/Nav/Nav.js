@@ -2,7 +2,7 @@ import React from "react";
 import "./Nav.css";
 
 const Nav = () => {
-  const sections = ["Home", "About", "Projects", "Contact"];
+  const sections = ["Home", "About", "Projects"];
   return (
     <nav id="nav">
       <div id="logo-container">

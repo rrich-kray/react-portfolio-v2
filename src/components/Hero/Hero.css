@@ -12,6 +12,7 @@
     justify-content: center;
 }
 
+
 #hero-container-right {
     flex: 1;
     display: flex;
@@ -25,6 +26,12 @@
     width: 125px;
     background: orange;
     color: white;
+    cursor: pointer
+}
+
+#hero-container-left button a {
+    text-decoration: none;
+    color: white
 }
 
 /*
@@ -37,6 +44,7 @@ Animation
     position: relative;
     transform: skewY(-15deg) translateX(50px) translateY(50px);
     animation: animateColor 2.5s linear infinite;
+    margin-right: 75px;
 }
 
 @keyframes animateColor {

@@ -48,26 +48,6 @@ const About = () => {
   ];
   return (
     <div id="about">
-      <div id="skills-bar">
-        {skills.map((skill) => (
-          <div
-            id="skill"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              // height: "200px",
-            }}
-          >
-            {/* <span>{skill.name}</span> */}
-            <img
-              src={skill.logo}
-              alt="skill-logo"
-              style={{ maxHeight: "100%" }}
-            ></img>
-          </div>
-        ))}
-      </div>
       <div id="interior-container">
         <div id="about-container-left">
           <img src={require("../../assets/images/selfie.jpg")} alt="selfie" />
