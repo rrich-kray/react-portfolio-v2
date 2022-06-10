@@ -12,6 +12,10 @@
     justify-content: center;
 }
 
+#hero-container-left h1 {
+    font-size: 3rem
+}
+
 
 #hero-container-right {
     flex: 1;
@@ -22,8 +26,8 @@
 }
 
 #hero-container-left button {
-    height: 40px;
-    width: 125px;
+    height: 50px;
+    width: 150px;
     background: orange;
     color: white;
     cursor: pointer
@@ -31,7 +35,9 @@
 
 #hero-container-left button a {
     text-decoration: none;
-    color: white
+    color: white;
+    font-size: 1rem;
+    font-weight: bold
 }
 
 /*

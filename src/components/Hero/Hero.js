@@ -7,7 +7,6 @@ const Hero = () => {
       <div id="hero-container-left">
         <div>
           <h1 style={{ color: "white" }}>Let's Build Something Great</h1>
-          <p style={{ color: "white" }}>I make cool things</p>
           <button>
             <a href="#about">Learn More</a>
           </button>
