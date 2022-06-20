@@ -178,4 +178,13 @@ export default [
     backgroundImage:
       "https://github.com/rrich-kray/kanban-board-pwa/blob/main/src/assets/images/screen1.png?raw=true",
   },
+  {
+    id: 20,
+    name: "Full-Stack Expenses Chart",
+    ghRepository: "https://github.com/rrich-kray/full-stack-expenses-chart",
+    deploymentLink: "",
+    description: "Full-stack implementation of my Expenses Chart project",
+    backgroundImage:
+      "https://github.com/rrich-kray/full-stack-expenses-chart/blob/main/client/src/images/screen1.png?raw=true",
+  },
 ];
