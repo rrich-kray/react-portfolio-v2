@@ -30,16 +30,16 @@ export default [
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/weather-dashboard/main/assets/images/screen1.png",
   },
-  // {
-  //   id: 4,
-  //   name: "Professional README Generator",
-  //   ghRepository: "https://github.com/rrich-kray/professional-readme-generator",
-  //   deploymentLink: "",
-  //   description:
-  //     "Programmatically generates professional README files using Node.js.",
-  //   backgroundImage:
-  //     "https://raw.githubusercontent.com/rrich-kray/professional-readme-generator/main/assets/images/screen1.png",
-  // },
+  {
+    id: 4,
+    name: "Professional README Generator",
+    ghRepository: "https://github.com/rrich-kray/professional-readme-generator",
+    deploymentLink: "",
+    description:
+      "Programmatically generates professional README files using Node.js.",
+    backgroundImage:
+      "https://raw.githubusercontent.com/rrich-kray/professional-readme-generator/main/assets/images/screen1.png",
+  },
   {
     id: 5,
     name: "Taskinator",
@@ -105,15 +105,15 @@ export default [
   //   backgroundImage:
   //     "https://raw.githubusercontent.com/perfect-perfect/coders-cave/main/public/cc.JPG",
   // },
-  {
-    id: 12,
-    name: "Shopify Clone",
-    ghRepository: "https://github.com/rrich-kray/shopify-2.0",
-    deploymentLink: "https://shopify-clone-rrich-kray.herokuapp.com/",
-    description: "Website for aspiring merchants.",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/shopify-2.0/main/assets/images/screen3.png",
-  },
+  // {
+  //   id: 12,
+  //   name: "Shopify Clone",
+  //   ghRepository: "https://github.com/rrich-kray/shopify-2.0",
+  //   deploymentLink: "https://shopify-clone-rrich-kray.herokuapp.com/",
+  //   description: "Website for aspiring merchants.",
+  //   backgroundImage:
+  //     "https://raw.githubusercontent.com/rrich-kray/shopify-2.0/main/assets/images/screen3.png",
+  // },
   {
     id: 13,
     name: "Advice Generator",
@@ -159,5 +159,23 @@ export default [
     description: "Landing page built with React",
     backgroundImage:
       "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
+  },
+  // {
+  //   id: 18,
+  //   name: "MERN Blog",
+  //   ghRepository: "https://github.com/rrich-kray/mern-blog",
+  //   deploymentLink: "https://simple-react-site-rrich-kray.herokuapp.com/",
+  //   description: "MERN stack blog website",
+  //   backgroundImage:
+  //     "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
+  // },
+  {
+    id: 19,
+    name: "Kanban Board PWA",
+    ghRepository: "https://github.com/rrich-kray/kanban-pwa",
+    deploymentLink: "https://kanban-board-rrich-kray.herokuapp.com/",
+    description: "Kanban board PWA built with React",
+    backgroundImage:
+      "https://github.com/rrich-kray/kanban-board-pwa/blob/main/src/assets/images/screen1.png?raw=true",
   },
 ];
