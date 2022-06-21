@@ -187,4 +187,14 @@ export default [
     backgroundImage:
       "https://github.com/rrich-kray/full-stack-expenses-chart/blob/main/client/src/images/screen1.png?raw=true",
   },
+  {
+    id: 21,
+    name: "Interactive Comments Section",
+    ghRepository: "https://github.com/rrich-kray/interactive-comments-section",
+    deploymentLink: "",
+    description:
+      "Single comment section that allows users to login, register, add comments and upvote/downvote comments. Most prominent technologies featured include React, Express, SQL, Sequelize and a REST API",
+    backgroundImage:
+      "https://github.com/rrich-kray/interactive-comments-section/blob/main/screen1.png?raw=true",
+  },
 ];
