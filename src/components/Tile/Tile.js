@@ -16,7 +16,7 @@ const Tile = ({ name, background, description, gh, deploy }) => {
         <h1>{name}</h1>
         <p>{description}</p>
         <a href={gh}>GitHub</a>
-        <a href={deploy}>Heroku</a>
+        {deploy && <a href={deploy}>Heroku</a>}
       </div>
     </div>
   );
