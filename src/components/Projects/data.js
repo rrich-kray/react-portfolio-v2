@@ -198,7 +198,7 @@ export default [
       "https://github.com/rrich-kray/interactive-comments-section/blob/main/screen1.png?raw=true",
   },
   {
-    id: 21,
+    id: 22,
     name: "Coding Quiz Pro",
     ghRepository: "https://github.com/rrich-kray/coding-quiz-pro",
     deploymentLink: "https://coding-quiz-pro-rrich-kray.herokuapp.com/",
@@ -206,5 +206,25 @@ export default [
       "Improved version of my original coding quiz app. Utilizes React, HTML/CSS/JS",
     backgroundImage:
       "https://github.com/rrich-kray/coding-quiz-pro/blob/main/src/screen1.png?raw=true",
+  },
+  {
+    id: 23,
+    name: "Full Stack Kanban Board",
+    ghRepository: "https://github.com/rrich-kray/kanban-board-full-stack/",
+    deploymentLink: "https://kanban-board-full-stack.herokuapp.com/",
+    description:
+      "Improved version of my original Kanban Board PWA app. Utilizes React, HTML/CSS/JS, SQL, MySQL, Sequelize, Express",
+    backgroundImage:
+      "https://github.com/rrich-kray/kanban-board-full-stack/blob/main/screen1.png?raw=true",
+  },
+  {
+    id: 24,
+    name: "MERN Blog",
+    ghRepository: "https://github.com/rrich-kray/mern-blog",
+    deploymentLink: "https://mern-blog-rrich-kray.herokuapp.com/",
+    description:
+      "A blog site utilizing React, SQL, MySQL, GraphQL, Apollo Client/Server",
+    backgroundImage:
+      "https://github.com/rrich-kray/mern-blog/blob/main/screen1.png?raw=true",
   },
 ];
