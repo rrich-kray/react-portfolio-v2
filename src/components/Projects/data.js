@@ -219,12 +219,12 @@ export default [
   },
   {
     id: 24,
-    name: "MERN Blog",
-    ghRepository: "https://github.com/rrich-kray/mern-blog",
-    deploymentLink: "https://mern-blog-rrich-kray.herokuapp.com/",
+    name: "Full Stack Photo Gallery",
+    ghRepository: "https://github.com/rrich-kray/react-portfolio-v2",
+    deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/",
     description:
-      "A blog site utilizing React, SQL, MySQL, GraphQL, Apollo Client/Server",
+      "Full stack application that allows users to log in and upload images to their personal gallery. Utilizes React, HTML/CSS/JS, SQL, Sequelize, Express",
     backgroundImage:
-      "https://github.com/rrich-kray/mern-blog/blob/main/screen1.png?raw=true",
+      "https://raw.githubusercontent.com/rrich-kray/photo-gallery-client/main/screen.png?token=GHSAT0AAAAAABW5HFNDIOX2NQIQAVQAKNSCYW5SUMQ",
   },
 ];
