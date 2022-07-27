@@ -40,15 +40,15 @@ export default [
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/professional-readme-generator/main/assets/images/screen1.png",
   },
-  {
-    id: 5,
-    name: "Taskinator",
-    ghRepository: "https://github.com/rrich-kray/taskinator",
-    deploymentLink: "https://rrich-kray.github.io/taskinator/",
-    description: "To-Do list application.",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/taskinator/main/assets/images/screen1.png",
-  },
+  // {
+  //   id: 5,
+  //   name: "Taskinator",
+  //   ghRepository: "https://github.com/rrich-kray/taskinator",
+  //   deploymentLink: "https://rrich-kray.github.io/taskinator/",
+  //   description: "To-Do list application.",
+  //   backgroundImage:
+  //     "https://raw.githubusercontent.com/rrich-kray/taskinator/main/assets/images/screen1.png",
+  // },
   {
     id: 6,
     name: "Horiseon Landing Page",
@@ -68,25 +68,25 @@ export default [
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/password-generator/main/Develop/assets/images/RPG.png",
   },
-  {
-    id: 8,
-    name: "Express Note Taker",
-    ghRepository: "https://github.com/rrich-kray/express-note-taker",
-    deploymentLink: "https://note-taker-rrich-kray.herokuapp.com/",
-    description:
-      "Application that stores user notes within an express.js server.",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/express-note-taker/main/assets/images/screen1.png",
-  },
-  {
-    id: 9,
-    name: "Taskmaster Pro",
-    ghRepository: "https://github.com/rrich-kray/Taskmaster-Pro",
-    deploymentLink: "https://rrich-kray.github.io/Taskmaster-Pro/",
-    description: "New and improved task tracking app.",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/Taskmaster-Pro/main/assets/images/screen2.png",
-  },
+  // {
+  //   id: 8,
+  //   name: "Express Note Taker",
+  //   ghRepository: "https://github.com/rrich-kray/express-note-taker",
+  //   deploymentLink: "https://note-taker-rrich-kray.herokuapp.com/",
+  //   description:
+  //     "Application that stores user notes within an express.js server.",
+  //   backgroundImage:
+  //     "https://raw.githubusercontent.com/rrich-kray/express-note-taker/main/assets/images/screen1.png",
+  // },
+  // {
+  //   id: 9,
+  //   name: "Taskmaster Pro",
+  //   ghRepository: "https://github.com/rrich-kray/Taskmaster-Pro",
+  //   deploymentLink: "https://rrich-kray.github.io/Taskmaster-Pro/",
+  //   description: "New and improved task tracking app.",
+  //   backgroundImage:
+  //     "https://raw.githubusercontent.com/rrich-kray/Taskmaster-Pro/main/assets/images/screen2.png",
+  // },
   {
     id: 10,
     name: "Ecommerce Backend",
@@ -219,12 +219,12 @@ export default [
   },
   {
     id: 24,
-    name: "Full Stack Photo Gallery",
+    name: "Photo Gallery",
     ghRepository: "https://github.com/rrich-kray/react-portfolio-v2",
     deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/",
     description:
       "Full stack application that allows users to log in and upload images to their personal gallery. Utilizes React, HTML/CSS/JS, SQL, Sequelize, Express",
     backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/photo-gallery-client/main/screen.png?token=GHSAT0AAAAAABW5HFNDIOX2NQIQAVQAKNSCYW5SUMQ",
+      "https://previews.dropbox.com/p/thumb/ABndKWUFxpZfD2bZRO4sJ4cNOI7ufl1YddT6RVaOin2OrXpm7OtQ214BW3FRKqAzAf_XSIePza3NFT5h-LksEnh9QZtt8O6b9Z8ZAPPrz7Fsjk9sswMyy67RT5vvMbqXFRYhGljSETcNXTrD8QnAvhhJHci8armu_Hi2rTSShd0136TOE4Br_wi7zlvYVWg9A7mXtDIRd8xSq1eXLJNH-yr4AOq85GcgvQ5lsDgmiXJFPtFOKQkBYJ2G1wwfwKL0onaSDuA2-yn_MHuQGFqZwcHPmUlQC_SSFD6ATWpdphoK6tT-ohHzZB4Bsj-FdXoM1xCjS4LvydsNt8PG7qd0vwMjocjGLwxHD5Do69IbESvlF3hjrXJ3B8MFCJUuvBOw0E0/p.png",
   },
 ];
