@@ -225,6 +225,6 @@ export default [
     description:
       "Full stack application that allows users to log in and upload images to their personal gallery. Utilizes React, HTML/CSS/JS, SQL, Sequelize, Express",
     backgroundImage:
-      "https://previews.dropbox.com/p/thumb/ABndKWUFxpZfD2bZRO4sJ4cNOI7ufl1YddT6RVaOin2OrXpm7OtQ214BW3FRKqAzAf_XSIePza3NFT5h-LksEnh9QZtt8O6b9Z8ZAPPrz7Fsjk9sswMyy67RT5vvMbqXFRYhGljSETcNXTrD8QnAvhhJHci8armu_Hi2rTSShd0136TOE4Br_wi7zlvYVWg9A7mXtDIRd8xSq1eXLJNH-yr4AOq85GcgvQ5lsDgmiXJFPtFOKQkBYJ2G1wwfwKL0onaSDuA2-yn_MHuQGFqZwcHPmUlQC_SSFD6ATWpdphoK6tT-ohHzZB4Bsj-FdXoM1xCjS4LvydsNt8PG7qd0vwMjocjGLwxHD5Do69IbESvlF3hjrXJ3B8MFCJUuvBOw0E0/p.png",
+      "https://previews.dropbox.com/p/thumb/ABnDTUimPYDOBJX265mEi62bAnhkxSBcKwAK_gqoqx-R30LOPlYSCc8qas-LsrzPwOlCUG-WVOZgVO89OWJnwh--WydpS4AE2lFxwBSZTAbZpdnWW7Y6p1xAPAbOx9v5SCmshKSmxj_r44qZyCRrgZtdnBPvtE3X7KHP9h-SeWrwkriT_3m_aXWWTMbIBXFedPC-B-HoBSd12sH5K0DPpgsVEL1ClrfhUyGpe9Snzq9K8tYaUZPGhb1xxyUx6ywFf1kIUBJ9ZAIEkCGMdh_F_lbh-XKEyyqgoPOlS2RcbQ1mupJz0buurzF-yrxVJEk7zvezctKz49Or4R4_f-s9tQwI8A_gQ1Uc8K_py51ADDxXIt2OV-IBs6OBIGP5XYKojFg/p.png",
   },
 ];
