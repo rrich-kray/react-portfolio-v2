@@ -191,7 +191,8 @@ export default [
     id: 21,
     name: "Interactive Comments Section",
     ghRepository: "https://github.com/rrich-kray/interactive-comments-section",
-    deploymentLink: "https://comments-section-client.vercel.app/",
+    deploymentLink:
+      "https://comments-section-client-aqwq695xr-rrich-kray.vercel.app/",
     description:
       "Single comment section that allows users to login, register, add comments and upvote/downvote comments. Most prominent technologies include React, Express, SQL, Sequelize and a REST API",
     backgroundImage:
