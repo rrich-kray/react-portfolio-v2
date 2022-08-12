@@ -202,7 +202,7 @@ export default [
     id: 22,
     name: "Coding Quiz Pro",
     ghRepository: "https://github.com/rrich-kray/coding-quiz-pro",
-    deploymentLink: "https://coding-quiz-pro-rrich-kray.herokuapp.com/",
+    deploymentLink: "https://codinq-quiz-98lw3sobg-rrich-kray.vercel.app/",
     description:
       "Improved version of my original coding quiz app. Utilizes React, HTML/CSS/JS",
     backgroundImage:
