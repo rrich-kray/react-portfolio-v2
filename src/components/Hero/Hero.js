@@ -12,7 +12,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div id="hero-container-right">
+      {/* <div id="hero-container-right">
         <div className="loader">
           <span style={{ "--i": 10 }}></span>
           <span style={{ "--i": 9 }}></span>
@@ -25,7 +25,7 @@ const Hero = () => {
           <span style={{ "--i": 2 }}></span>
           <span style={{ "--i": 1 }}></span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

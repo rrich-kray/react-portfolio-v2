@@ -16,6 +16,13 @@
     font-size: 3rem
 }
 
+#hero-container-left :nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
 
 #hero-container-right {
     flex: 1;
