@@ -20,14 +20,16 @@ const Projects = () => {
         <h1>Projects</h1>
       </div>
       <div id="projects-container-right">
-        {data.map((project) => (
-          <Tile
-            name={project.name}
-            description={project.description}
-            background={project.backgroundImage}
-            gh={project.ghRepository}
-            deploy={project.deploymentLink}
-          />
+        {data.map((project, i) => (
+          <div className="tile-wrapper" style={{ "--i": i }}>
+            <Tile
+              name={project.name}
+              description={project.description}
+              background={project.backgroundImage}
+              gh={project.ghRepository}
+              deploy={project.deploymentLink}
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     margin-top: 0;
+    animation: fadeIn 0.25s linear
 }
 
 #projects-container-right {
@@ -27,4 +28,23 @@
     overflow-y: scroll;
     padding-left: 100px;
     padding-right: 100px;
+}
+
+.tile-wrapper {
+    height: 500px;
+    opacity: 0;
+    animation: fadeIn 0.5s linear forwards;
+    animation-delay: calc(0.1s*var(--i))
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
 }

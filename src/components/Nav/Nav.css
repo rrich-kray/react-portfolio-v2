@@ -4,7 +4,8 @@
     display: flex;
     backdrop-filter: blur(10px);
     z-index: 999;
-    position: fixed
+    position: fixed;
+    top: 0
 }
 
 #logo-container {
