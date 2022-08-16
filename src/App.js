@@ -27,7 +27,8 @@ function App() {
           <Nav />
           {/* <Hero /> */}
           <Projects />
-          <About />
+          <AboutRedux />
+          {/* <About /> */}
           {/* <Skills /> */}
           {/* <Contact /> */}
         </div>
