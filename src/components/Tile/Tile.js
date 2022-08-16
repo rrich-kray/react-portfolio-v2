@@ -1,7 +1,22 @@
 import React from "react";
 import "./Tile.css";
 
-const Tile = ({ name, background, description, gh, deploy }) => {
+const Tile = ({
+  name,
+  background,
+  summary,
+  gh,
+  deploy,
+  setPostActive,
+  setActivePost,
+}) => {
+  const setPostContent = () => {
+    setPostActive(true);
+    setActivePost({
+      name: name,
+    });
+  };
+
   return (
     <div
       className="tile"
@@ -14,7 +29,7 @@ const Tile = ({ name, background, description, gh, deploy }) => {
     >
       <div className="tile-overlay">
         <h1>{name}</h1>
-        <p>{description}</p>
+        <p>{summary}</p>
         <a href={gh}>GitHub</a>
         {deploy && <a href={deploy}>Deployed</a>}
       </div>

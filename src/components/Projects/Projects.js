@@ -3,7 +3,7 @@ import "./Projects.css";
 import data from "./data";
 import Tile from "../Tile/Tile";
 
-const Projects = () => {
+const Projects = ({ setPostActive, setActivePost }) => {
   const [offset, setOffset] = useState(0);
 
   // useEffect(() => {
@@ -24,10 +24,12 @@ const Projects = () => {
           <div className="tile-wrapper" style={{ "--i": i }}>
             <Tile
               name={project.name}
-              description={project.description}
+              summary={project.summary}
               background={project.backgroundImage}
               gh={project.ghRepository}
               deploy={project.deploymentLink}
+              setActivePost={setActivePost}
+              setPostActive={setPostActive}
             />
           </div>
         ))}

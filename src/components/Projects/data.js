@@ -5,8 +5,10 @@ export default [
     name: "Employee Tracker",
     ghRepository: "https://github.com/rrich-kray/employee-tracker",
     deploymentLink: "",
+    summary: "Node.js application that stores employee data.",
     description:
-      "Node.js application that utilizes the Inquirer package to record user input and MySQL to store and update employee information.",
+      "Employee Tracker provides users a means to store, view, update and delete employee, department and role data. While challenging, this project provided a great opportunity to practice working with SQL queries. In the future, I intend to integrate this application with a front end.",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/employee-tracker/main/assets/images/screen2.png",
   },
@@ -15,8 +17,10 @@ export default [
     name: "Team Profile Generator",
     ghRepository: "https://github.com/rrich-kray/team-profile-generator",
     deploymentLink: "",
-    description:
+    summary:
       "Node.js application that programmatically generates HTML containing a team profile",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/team-profile-generator/main/assets/images/screen1.png",
   },
@@ -25,8 +29,10 @@ export default [
     name: "Weather Dashboard",
     ghRepository: "https://github.com/rrich-kray/weather-dashboard",
     deploymentLink: "https://rrich-kray.github.io/weather-dashboard/",
-    description:
+    summary:
       "Dashboard that displays current and forecasted weather data from the OpenWeatherMap API",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/weather-dashboard/main/assets/images/screen1.png",
   },
@@ -35,8 +41,10 @@ export default [
     name: "Professional README Generator",
     ghRepository: "https://github.com/rrich-kray/professional-readme-generator",
     deploymentLink: "",
-    description:
+    summary:
       "Programmatically generates professional README files using Node.js.",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/professional-readme-generator/main/assets/images/screen1.png",
   },
@@ -45,7 +53,8 @@ export default [
   //   name: "Taskinator",
   //   ghRepository: "https://github.com/rrich-kray/taskinator",
   //   deploymentLink: "https://rrich-kray.github.io/taskinator/",
-  //   description: "To-Do list application.",
+  //   summary: "To-Do list application.",
+  // description: "",
   //   backgroundImage:
   //     "https://raw.githubusercontent.com/rrich-kray/taskinator/main/assets/images/screen1.png",
   // },
@@ -55,7 +64,9 @@ export default [
     ghRepository: "https://github.com/rrich-kray/Your-Landing-Spot-for-Success",
     deploymentLink:
       "https://rrich-kray.github.io/Your-Landing-Spot-for-Success/",
-    description: "Landing page for fictional company.",
+    summary: "Landing page for fictional company.",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/Your-Landing-Spot-for-Success/main/Develop/assets/images/landing-page.png",
   },
@@ -64,7 +75,9 @@ export default [
     name: "Random Password Generator",
     ghRepository: "https://github.com/rrich-kray/password-generator",
     deploymentLink: "https://rrich-kray.github.io/password-generator/",
-    description: "Generates a random password of specified length and content.",
+    summary: "Generates a random password of specified length and content.",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/password-generator/main/Develop/assets/images/RPG.png",
   },
@@ -73,8 +86,10 @@ export default [
   //   name: "Express Note Taker",
   //   ghRepository: "https://github.com/rrich-kray/express-note-taker",
   //   deploymentLink: "https://note-taker-rrich-kray.herokuapp.com/",
-  //   description:
+  //   summary:
   //     "Application that stores user notes within an express.js server.",
+  // description: "",
+  // video: "",
   //   backgroundImage:
   //     "https://raw.githubusercontent.com/rrich-kray/express-note-taker/main/assets/images/screen1.png",
   // },
@@ -83,7 +98,9 @@ export default [
   //   name: "Taskmaster Pro",
   //   ghRepository: "https://github.com/rrich-kray/Taskmaster-Pro",
   //   deploymentLink: "https://rrich-kray.github.io/Taskmaster-Pro/",
-  //   description: "New and improved task tracking app.",
+  //   summary: "New and improved task tracking app.",
+  // description: "",
+  // video: "",
   //   backgroundImage:
   //     "https://raw.githubusercontent.com/rrich-kray/Taskmaster-Pro/main/assets/images/screen2.png",
   // },
@@ -92,7 +109,9 @@ export default [
     name: "Ecommerce Backend",
     ghRepository: "https://github.com/rrich-kray/ecommerce-product-database",
     deploymentLink: "",
-    description: "Database for a hypothetical ecommerce website.",
+    summary: "Database for a hypothetical ecommerce website.",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/ecommerce-product-database/master/assets/images/screen1.png",
   },
@@ -101,7 +120,9 @@ export default [
   //   name: "Coders Cave",
   //   ghRepository: "https://github.com/perfect-perfect/coders-cave",
   //   deploymentLink: "",
-  //   description: "Message board for coders.",
+  //   summary: "Message board for coders.",
+  // description: "",
+  // video: "",
   //   backgroundImage:
   //     "https://raw.githubusercontent.com/perfect-perfect/coders-cave/main/public/cc.JPG",
   // },
@@ -110,7 +131,9 @@ export default [
   //   name: "Shopify Clone",
   //   ghRepository: "https://github.com/rrich-kray/shopify-2.0",
   //   deploymentLink: "https://shopify-clone-rrich-kray.herokuapp.com/",
-  //   description: "Website for aspiring merchants.",
+  //   summary: "Website for aspiring merchants.",
+  // description: "",
+  // video: "",
   //   backgroundImage:
   //     "https://raw.githubusercontent.com/rrich-kray/shopify-2.0/main/assets/images/screen3.png",
   // },
@@ -119,8 +142,9 @@ export default [
     name: "Advice Generator",
     ghRepository: "https://github.com/rrich-kray/advice-generator",
     deploymentLink: "https://advice-generator-rrich-kray.herokuapp.com/",
-    description:
-      "Simple random quote generator that utilizes the Advice Slip API",
+    summary: "Simple random quote generator that utilizes the Advice Slip API",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/advice-generator/main/src/images/advice-gen.png",
   },
@@ -129,7 +153,9 @@ export default [
     name: "Expenses Chart",
     ghRepository: "https://github.com/rrich-kray/expenses-chart",
     deploymentLink: "https://expenses-chart-rrich-kray.herokuapp.com/",
-    description: "Simple expenses chart",
+    summary: "Simple expenses chart",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/expenses-chart/main/src/images/screen1.png",
   },
@@ -138,7 +164,9 @@ export default [
     name: "Dropdown Challenge",
     ghRepository: "https://github.com/rrich-kray/dropdown-landing",
     deploymentLink: "https://dropdown-challenge-rrich-kray.herokuapp.com/",
-    description: "Simple landing page with dropdown navigation menus",
+    summary: "Simple landing page with dropdown navigation menus",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/dropdown-challenge/main/src/images/screen1.png",
   },
@@ -147,7 +175,9 @@ export default [
     name: "GitHub User Search",
     ghRepository: "https://github.com/rrich-kray/github-user-search",
     deploymentLink: "https://github-search-rrich-kray.herokuapp.com/",
-    description: "Simple application that queries GitHub's User API",
+    summary: "Simple application that queries GitHub's User API",
+    description: "",
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/github-user-search/main/src/assets/screen1.png",
   },
@@ -157,7 +187,9 @@ export default [
     ghRepository:
       "https://github.com/rrich-kray/react-landing-page-optimized.git",
     deploymentLink: "https://react-landing-page-nine.vercel.app/",
-    description: "Landing page built with React",
+    summary: "Landing page built with React",
+    description: "",
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
   },
@@ -166,7 +198,9 @@ export default [
   //   name: "MERN Blog",
   //   ghRepository: "https://github.com/rrich-kray/mern-blog",
   //   deploymentLink: "https://simple-react-site-rrich-kray.herokuapp.com/",
-  //   description: "MERN stack blog website",
+  //   summary: "MERN stack blog website",
+  // description: "",
+  // video: "",
   //   backgroundImage:
   //     "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
   // },
@@ -175,7 +209,9 @@ export default [
     name: "Kanban Board PWA",
     ghRepository: "https://github.com/rrich-kray/kanban-pwa",
     deploymentLink: "https://kanban-board-rrich-kray.herokuapp.com/",
-    description: "Kanban board PWA built with React",
+    summary: "Kanban board PWA built with React",
+    description: "",
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/kanban-board-pwa/blob/main/src/assets/images/screen1.png?raw=true",
   },
@@ -184,7 +220,9 @@ export default [
     name: "Full-Stack Expenses Chart",
     ghRepository: "https://github.com/rrich-kray/full-stack-expenses-chart",
     deploymentLink: "",
-    description: "Full-stack implementation of my Expenses Chart project",
+    summary: "Full-stack implementation of my Expenses Chart project",
+    description: "",
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/full-stack-expenses-chart/blob/main/client/src/images/screen1.png?raw=true",
   },
@@ -194,8 +232,10 @@ export default [
     ghRepository: "https://github.com/rrich-kray/interactive-comments-section",
     deploymentLink:
       "https://comments-section-client-aqwq695xr-rrich-kray.vercel.app/",
-    description:
+    summary:
       "Single comment section that allows users to login, register, add comments and upvote/downvote comments. Most prominent technologies include React, Express, SQL, Sequelize and a REST API",
+    description: "",
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/interactive-comments-section/blob/main/screen1.png?raw=true",
   },
@@ -204,8 +244,10 @@ export default [
     name: "Coding Quiz Pro",
     ghRepository: "https://github.com/rrich-kray/coding-quiz-pro",
     deploymentLink: "https://codinq-quiz-98lw3sobg-rrich-kray.vercel.app/",
-    description:
+    summary:
       "Improved version of my original coding quiz app. Utilizes React, HTML/CSS/JS",
+    description: "",
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/coding-quiz-pro/blob/main/src/screen1.png?raw=true",
   },
@@ -214,8 +256,10 @@ export default [
     name: "Full Stack Kanban Board",
     ghRepository: "https://github.com/rrich-kray/kanban-board-client",
     deploymentLink: "https://kanban-board-lyart.vercel.app/dashboard",
-    description:
+    summary:
       "Improved version of my original Kanban Board PWA app. Utilizes React, HTML/CSS/JS, SQL, MySQL, Sequelize, Express.",
+    description: "",
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/kanban-board-full-stack/blob/main/screen1.png?raw=true",
   },
@@ -224,8 +268,10 @@ export default [
   //   name: "Photo Gallery",
   //   ghRepository: "https://github.com/rrich-kray/react-portfolio-v2",
   //   deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/",
-  //   description:
+  //   summary:
   //     "Full stack application that allows users to log in and upload images to their personal gallery. Utilizes React, HTML/CSS/JS, SQL, Sequelize, Express",
+  // description: "",
+  // video: "",
   //   backgroundImage:
   //     "https://previews.dropbox.com/p/thumb/ABnDTUimPYDOBJX265mEi62bAnhkxSBcKwAK_gqoqx-R30LOPlYSCc8qas-LsrzPwOlCUG-WVOZgVO89OWJnwh--WydpS4AE2lFxwBSZTAbZpdnWW7Y6p1xAPAbOx9v5SCmshKSmxj_r44qZyCRrgZtdnBPvtE3X7KHP9h-SeWrwkriT_3m_aXWWTMbIBXFedPC-B-HoBSd12sH5K0DPpgsVEL1ClrfhUyGpe9Snzq9K8tYaUZPGhb1xxyUx6ywFf1kIUBJ9ZAIEkCGMdh_F_lbh-XKEyyqgoPOlS2RcbQ1mupJz0buurzF-yrxVJEk7zvezctKz49Or4R4_f-s9tQwI8A_gQ1Uc8K_py51ADDxXIt2OV-IBs6OBIGP5XYKojFg/p.png",
   // },

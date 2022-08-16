@@ -8,8 +8,11 @@ import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import Splash from "./components/Splash/Splash";
 import AboutRedux from "./components/AboutRedux/AboutRedux";
+import ProjectPage from "./components/ProjectPage/ProjectPage";
 
 function App() {
+  const [isPostActive, setPostActive] = useState(false);
+  const [activePost, setActivePost] = useState({});
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -24,13 +27,22 @@ function App() {
         <Splash />
       ) : (
         <div id="app">
-          <Nav />
-          {/* <Hero /> */}
-          <Projects />
-          <AboutRedux />
-          {/* <About /> */}
-          {/* <Skills /> */}
-          {/* <Contact /> */}
+          {isPostActive ? (
+            <ProjectPage data={activePost} />
+          ) : (
+            <>
+              {/* <Nav /> */}
+              {/* <Hero /> */}
+              <Projects
+                setPostActive={setPostActive}
+                setActivePost={setActivePost}
+              />
+              <AboutRedux />
+              {/* <About /> */}
+              {/* <Skills /> */}
+              {/* <Contact /> */}
+            </>
+          )}
         </div>
       )}
     </>
