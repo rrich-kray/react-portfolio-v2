@@ -7,6 +7,10 @@
     flex: 1
 }
 
+.about-redux-left-panel h1 {
+    margin-top: 0
+}
+
 .about-redux-right-panel {
     flex: 2;
     display: flex;
