@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: var(--secondary-clr); */
+    background: var(--secondary-clr);
     background: black;
     position: relative;
 }
@@ -12,7 +12,7 @@
 #interior-container {
     height: 100%;
     width: 100%;
-    /* background: var(--tertiary-clr); */
+    background: var(--tertiary-clr);
     position: absolute;
     top: 0%;
     display: flex
