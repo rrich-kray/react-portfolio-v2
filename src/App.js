@@ -7,6 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import Splash from "./components/Splash/Splash";
+import AboutRedux from "./components/AboutRedux/AboutRedux";
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -25,8 +26,8 @@ function App() {
         <div id="app">
           <Nav />
           {/* <Hero /> */}
-          <About />
           <Projects />
+          <About />
           {/* <Skills /> */}
           {/* <Contact /> */}
         </div>

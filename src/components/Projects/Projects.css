@@ -33,6 +33,7 @@
 .tile-wrapper {
     height: 500px;
     opacity: 0;
+    min-width: 500px;
     animation: fadeIn 0.5s linear forwards;
     animation-delay: calc(0.1s*var(--i))
 }
