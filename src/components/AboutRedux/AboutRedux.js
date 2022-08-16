@@ -84,7 +84,7 @@ const AboutRedux = () => {
           className="linkedIn-container text-container"
           style={{ marginTop: "50px" }}
         >
-          <h1>LinkedIn:</h1>
+          <h1>LinkedIn</h1>
           <span>https://www.linkedin.com/in/ryankray/</span>
         </div>
         <div
