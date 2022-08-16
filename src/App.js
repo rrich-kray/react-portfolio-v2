@@ -25,8 +25,8 @@ function App() {
         <div id="app">
           <Nav />
           {/* <Hero /> */}
-          <Projects />
           <About />
+          <Projects />
           {/* <Skills /> */}
           {/* <Contact /> */}
         </div>

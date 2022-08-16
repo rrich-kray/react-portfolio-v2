@@ -35,7 +35,7 @@ const Splash = ({ setLoading }) => {
     <div className="splash">
       <div className="cover"></div>
       <div className="text" ref={text}>
-        Welcome to my portfolio page
+        Welcome to my portfolio page!
       </div>
     </div>
   );
