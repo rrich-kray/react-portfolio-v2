@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./Splash.css";
 
-const Splash = ({ setLoading }) => {
+const Splash = () => {
   const text = useRef();
   // Simple page returning a text animation
   // Three parts: background (z-index: 0), Text (z-index: 1), cover (z-index: 2).
@@ -15,7 +15,6 @@ const Splash = ({ setLoading }) => {
       let timePassed = Date.now() - start;
       if (timePassed > 750) {
         clearInterval(timer);
-        setLoading(false);
       }
 
       // Animation goes here
@@ -24,12 +23,6 @@ const Splash = ({ setLoading }) => {
       text.current.style.top = topVal + "px";
     }, 1);
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  });
 
   return (
     <div className="splash">

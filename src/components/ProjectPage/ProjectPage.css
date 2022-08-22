@@ -1,6 +1,19 @@
 .project-page {
     min-height: 100vh;
-    width: 100vw
+    width: 100vw;
+    position: relative;
+}
+
+.arrow-back-icon {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 75px;
+    width: 75px
+}
+
+.arrow-back-icon :nth-child(1) {
+    max-height: 100%
 }
 
 .header {
@@ -10,6 +23,13 @@
     display: flex;
     justify-content: center;
     align-items: center
+}
+
+.header-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .video-container {

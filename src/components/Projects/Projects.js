@@ -3,7 +3,7 @@ import "./Projects.css";
 import data from "./data";
 import Tile from "../Tile/Tile";
 
-const Projects = ({ setPostActive, setActivePost }) => {
+const Projects = ({ setActivePost }) => {
   const [offset, setOffset] = useState(0);
 
   // useEffect(() => {
@@ -25,11 +25,11 @@ const Projects = ({ setPostActive, setActivePost }) => {
             <Tile
               name={project.name}
               summary={project.summary}
+              description={project.description}
               background={project.backgroundImage}
               gh={project.ghRepository}
               deploy={project.deploymentLink}
               setActivePost={setActivePost}
-              setPostActive={setPostActive}
             />
           </div>
         ))}

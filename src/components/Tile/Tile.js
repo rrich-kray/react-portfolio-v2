@@ -4,16 +4,20 @@ import "./Tile.css";
 const Tile = ({
   name,
   background,
+  description,
   summary,
   gh,
   deploy,
-  setPostActive,
   setActivePost,
 }) => {
-  const setPostContent = () => {
-    setPostActive(true);
+  const setActivePostFunc = () => {
     setActivePost({
       name: name,
+      background: background,
+      summary: summary,
+      description: description,
+      gh: gh,
+      deploy: deploy,
     });
   };
 
@@ -26,6 +30,7 @@ const Tile = ({
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
+      onClick={() => setActivePostFunc()}
     >
       <div className="tile-overlay">
         <h1>{name}</h1>

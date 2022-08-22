@@ -11,10 +11,14 @@ import AboutRedux from "./components/AboutRedux/AboutRedux";
 import ProjectPage from "./components/ProjectPage/ProjectPage";
 
 function App() {
-  const [isPostActive, setPostActive] = useState(false);
-  const [activePost, setActivePost] = useState({});
+  // Clicking on tile will set isPostActive to true, and also set activePost to the content of that post
+  // JavaScript checks the same location in memory for equality. Even if two objects have the same contents, they will not occupy the same locatin in memory, and therefore JavaScript will not declare them strictly equal
+  const [activePost, setActivePost] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
+  console.log(activePost);
+  console.log(isLoading);
+  console.log(activePost.length);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -27,16 +31,13 @@ function App() {
         <Splash />
       ) : (
         <div id="app">
-          {isPostActive ? (
-            <ProjectPage data={activePost} />
+          {activePost.length !== 0 ? (
+            <ProjectPage data={activePost} setActivePost={setActivePost} />
           ) : (
             <>
               {/* <Nav /> */}
               {/* <Hero /> */}
-              <Projects
-                setPostActive={setPostActive}
-                setActivePost={setActivePost}
-              />
+              <Projects setActivePost={setActivePost} />
               <AboutRedux />
               {/* <About /> */}
               {/* <Skills /> */}
