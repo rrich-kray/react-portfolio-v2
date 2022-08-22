@@ -36,7 +36,9 @@ const ProjectPage = ({ projectData, setActivePost }) => {
         )}
       </div>
       <div className="body-container">
-        <div className="description-container"></div>
+        <div className="description-container">
+          <p>{projectData.description}</p>
+        </div>
         <div className="link-container"></div>
       </div>
     </div>

@@ -7,6 +7,8 @@ import commentsSectionVid from "./videos/comments-section.webm";
 import dropdownVid from "./videos/dropdown.webm";
 import ghUserSearchVid from "./videos/gh-user-search.webm";
 import reactLandingPageVid from "./videos/react-landing-page.webm";
+import passGenVid from "./videos/pass-gen.webm";
+import adviceGenVid from "./videos/advice-gen.webm";
 
 export default [
   {
@@ -67,18 +69,18 @@ export default [
   //   backgroundImage:
   //     "https://raw.githubusercontent.com/rrich-kray/taskinator/main/assets/images/screen1.png",
   // },
-  {
-    id: 6,
-    name: "Horiseon Landing Page",
-    ghRepository: "https://github.com/rrich-kray/Your-Landing-Spot-for-Success",
-    deploymentLink:
-      "https://rrich-kray.github.io/Your-Landing-Spot-for-Success/",
-    summary: "Landing page for fictional company.",
-    description: "",
-    video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/Your-Landing-Spot-for-Success/main/Develop/assets/images/landing-page.png",
-  },
+  // {
+  //   id: 6,
+  //   name: "Horiseon Landing Page",
+  //   ghRepository: "https://github.com/rrich-kray/Your-Landing-Spot-for-Success",
+  //   deploymentLink:
+  //     "https://rrich-kray.github.io/Your-Landing-Spot-for-Success/",
+  //   summary: "Landing page for fictional company.",
+  //   description: "",
+  //   video: "",
+  //   backgroundImage:
+  //     "https://raw.githubusercontent.com/rrich-kray/Your-Landing-Spot-for-Success/main/Develop/assets/images/landing-page.png",
+  // },
   {
     id: 7,
     name: "Random Password Generator",
@@ -86,7 +88,7 @@ export default [
     deploymentLink: "https://rrich-kray.github.io/password-generator/",
     summary: "Generates a random password of specified length and content.",
     description: "",
-    video: "",
+    video: passGenVid,
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/password-generator/main/Develop/assets/images/RPG.png",
   },
@@ -153,7 +155,7 @@ export default [
     deploymentLink: "https://advice-generator-rrich-kray.herokuapp.com/",
     summary: "Simple random quote generator that utilizes the Advice Slip API",
     description: "",
-    video: "",
+    video: adviceGenVid,
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/advice-generator/main/src/images/advice-gen.png",
   },
