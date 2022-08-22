@@ -16,9 +16,6 @@ function App() {
   const [activePost, setActivePost] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
-  console.log(activePost);
-  console.log(isLoading);
-  console.log(activePost.length);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -32,7 +29,10 @@ function App() {
       ) : (
         <div id="app">
           {activePost.length !== 0 ? (
-            <ProjectPage data={activePost} setActivePost={setActivePost} />
+            <ProjectPage
+              projectData={activePost}
+              setActivePost={setActivePost}
+            />
           ) : (
             <>
               {/* <Nav /> */}

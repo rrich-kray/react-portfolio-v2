@@ -28,6 +28,7 @@ const Projects = ({ setActivePost }) => {
               description={project.description}
               background={project.backgroundImage}
               gh={project.ghRepository}
+              video={project.video}
               deploy={project.deploymentLink}
               setActivePost={setActivePost}
             />

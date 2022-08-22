@@ -9,11 +9,12 @@
     top: 5%;
     left: 5%;
     height: 75px;
-    width: 75px
+    width: 75px;
+    backgrounD: white
 }
 
 .arrow-back-icon :nth-child(1) {
-    max-height: 100%
+    height: 100%
 }
 
 .header {
@@ -30,9 +31,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px
 }
 
-.video-container {
-    height: 50vh;
+.header-panel h1,
+.header-panel p {
+    color: white
+}
+
+.video-container,
+.wallpaper-container {
+    height: 75vh;
     width: 100%
 }

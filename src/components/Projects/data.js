@@ -1,5 +1,13 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 import ticTacToe from "../../assets/images/tic-tac-toe.png";
+import ticTacToeVid from "./videos/tictactoe.webm";
+import kanbanVid from "./videos/kanban.webm";
+import codingQuizVid from "./videos/coding-quiz.webm";
+import commentsSectionVid from "./videos/comments-section.webm";
+import dropdownVid from "./videos/dropdown.webm";
+import ghUserSearchVid from "./videos/gh-user-search.webm";
+import reactLandingPageVid from "./videos/react-landing-page.webm";
+
 export default [
   {
     id: 1,
@@ -167,7 +175,7 @@ export default [
     deploymentLink: "https://dropdown-challenge-rrich-kray.herokuapp.com/",
     summary: "Simple landing page with dropdown navigation menus",
     description: "",
-    video: "",
+    video: dropdownVid,
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/dropdown-challenge/main/src/images/screen1.png",
   },
@@ -178,7 +186,7 @@ export default [
     deploymentLink: "https://github-search-rrich-kray.herokuapp.com/",
     summary: "Simple application that queries GitHub's User API",
     description: "",
-    video: "",
+    video: ghUserSearchVid,
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/github-user-search/main/src/assets/screen1.png",
   },
@@ -190,7 +198,7 @@ export default [
     deploymentLink: "https://react-landing-page-nine.vercel.app/",
     summary: "Landing page built with React",
     description: "",
-    video: "",
+    video: reactLandingPageVid,
     backgroundImage:
       "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
   },
@@ -236,7 +244,7 @@ export default [
     summary:
       "Single comment section that allows users to login, register, add comments and upvote/downvote comments. Most prominent technologies include React, Express, SQL, Sequelize and a REST API",
     description: "",
-    video: "",
+    video: commentsSectionVid,
     backgroundImage:
       "https://github.com/rrich-kray/interactive-comments-section/blob/main/screen1.png?raw=true",
   },
@@ -248,7 +256,7 @@ export default [
     summary:
       "Improved version of my original coding quiz app. Utilizes React, HTML/CSS/JS",
     description: "",
-    video: "",
+    video: codingQuizVid,
     backgroundImage:
       "https://github.com/rrich-kray/coding-quiz-pro/blob/main/src/screen1.png?raw=true",
   },
@@ -260,7 +268,7 @@ export default [
     summary:
       "Improved version of my original Kanban Board PWA app. Utilizes React, HTML/CSS/JS, SQL, MySQL, Sequelize, Express.",
     description: "",
-    video: "",
+    video: kanbanVid,
     backgroundImage:
       "https://github.com/rrich-kray/kanban-board-full-stack/blob/main/screen1.png?raw=true",
   },
@@ -272,7 +280,7 @@ export default [
     summary:
       "Improved version of my original Kanban Board PWA app. Utilizes React, HTML/CSS/JS, SQL, MySQL, Sequelize, Express.",
     description: "",
-    video: "",
+    video: ticTacToeVid,
     backgroundImage: ticTacToe,
   },
   // {

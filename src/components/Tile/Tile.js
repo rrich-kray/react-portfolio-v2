@@ -7,6 +7,7 @@ const Tile = ({
   description,
   summary,
   gh,
+  video,
   deploy,
   setActivePost,
 }) => {
@@ -16,6 +17,7 @@ const Tile = ({
       background: background,
       summary: summary,
       description: description,
+      video: video,
       gh: gh,
       deploy: deploy,
     });
