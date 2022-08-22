@@ -1,4 +1,5 @@
 // eslint-disable-next-line import/no-anonymous-default-export
+import ticTacToe from "../../assets/images/tic-tac-toe.png";
 export default [
   {
     id: 1,
@@ -262,6 +263,17 @@ export default [
     video: "",
     backgroundImage:
       "https://github.com/rrich-kray/kanban-board-full-stack/blob/main/screen1.png?raw=true",
+  },
+  {
+    id: 24,
+    name: "Tic Tac Toe",
+    ghRepository: "https://github.com/rrich-kray/tic-tac-toe",
+    deploymentLink: "https://tic-tac-toe-eight-weld.vercel.app/",
+    summary:
+      "Improved version of my original Kanban Board PWA app. Utilizes React, HTML/CSS/JS, SQL, MySQL, Sequelize, Express.",
+    description: "",
+    video: "",
+    backgroundImage: ticTacToe,
   },
   // {
   //   id: 24,

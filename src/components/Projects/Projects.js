@@ -41,3 +41,4 @@ const Projects = ({ setPostActive, setActivePost }) => {
 // 090258
 
 export default Projects;
+// Add description to prjects page
