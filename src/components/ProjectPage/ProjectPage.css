@@ -12,7 +12,8 @@
     width: 75px;
     background: rgba(100, 100, 100);
     border-radius: 50%;
-    cursor: pointer
+    cursor: pointer;
+    z-index: 999
 }
 
 .arrow-back-icon :nth-child(1) {
@@ -52,12 +53,19 @@
 }
 
 .body-container h1,
-.body-container p {
+.body-container p,
+.body-container span,
+.body-container a {
     color: white
 }
 
 .description-container {
     margin-top: 50px
+}
+
+.project-link-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .description-container,

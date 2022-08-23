@@ -42,7 +42,23 @@ const ProjectPage = ({ projectData, setActivePost }) => {
             <h1>About</h1>
           </div>
           <div className="description">
-            <p>{projectData.info.description}</p>
+            <p style={{ marginBottom: "20px" }}>
+              {projectData.info.description}
+            </p>
+            <div className="project-link-container">
+              <a
+                href={projectData.ghRepository}
+                style={{ marginBottom: "20px" }}
+              >
+                GitHub Repository
+              </a>
+              <a
+                href={projectData.deploymentLink}
+                style={{ marginBottom: "20px" }}
+              >
+                Production Version
+              </a>
+            </div>
           </div>
         </div>
         <div className="technologies-container info-container">

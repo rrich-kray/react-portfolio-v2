@@ -188,7 +188,7 @@ export default [
     info: {
       description:
         "This was a Frontend Mentor challenge that I used to refresh myself on fetching data from third-party APIs. The UI was built using React, and it uses the Advice Slip API to generate random quotes.",
-      technologies: [],
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: adviceGenVid,
@@ -204,7 +204,7 @@ export default [
     info: {
       description:
         "This was another Frontend Mentor challenge that I took upon myself to both improve my CSS acumen and get more experience with the Recharts React library. Design belongs to frontendmentor.io",
-      technologies: [],
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: "",
@@ -236,7 +236,7 @@ export default [
     info: {
       description:
         "A React-built SPA that allows users to query the GitHub User API to display GitHub user information. I developed this application immediately after the conclusion of my bootcamp as a means to refresh myself on making fetch requests to third-party APIs. In its current build, the application simply allows the user to search GitHub by username and user information about that user.",
-      technologies: [],
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: ghUserSearchVid,
