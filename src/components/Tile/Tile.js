@@ -12,15 +12,15 @@ const Tile = ({ projectData, setActivePost }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      onClick={() => setActivePost(projectData)}
+      // onClick={() => setActivePost(projectData)}
     >
       <div className="tile-overlay">
         <h1>{projectData.name}</h1>
         <p>{projectData.summary}</p>
-        {/* <a href={projectData.gh}>GitHub</a>
+        <a href={projectData.ghRepository}>GitHub</a>
         {projectData.deploymentLink && (
           <a href={projectData.deploymentLink}>Deployed</a>
-        )} */}
+        )}
       </div>
     </div>
   );

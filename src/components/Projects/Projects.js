@@ -4,7 +4,6 @@ import data from "./data";
 import Tile from "../Tile/Tile";
 
 const Projects = ({ setActivePost }) => {
-  console.log(data);
   const [offset, setOffset] = useState(0);
   return (
     <div id="projects">

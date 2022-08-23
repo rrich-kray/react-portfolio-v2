@@ -1,15 +1,15 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 import ticTacToe from "../../assets/images/tic-tac-toe.png";
-import ticTacToeVid from "./videos/tictactoe.webm";
-import kanbanVid from "./videos/kanban.webm";
-import codingQuizVid from "./videos/coding-quiz.webm";
-import commentsSectionVid from "./videos/comments-section.webm";
-import dropdownVid from "./videos/dropdown.webm";
-import ghUserSearchVid from "./videos/gh-user-search.webm";
-import reactLandingPageVid from "./videos/react-landing-page.webm";
-import passGenVid from "./videos/pass-gen.webm";
-import adviceGenVid from "./videos/advice-gen.webm";
-import weatherDashVid from "./videos/weather-dash.webm";
+// import ticTacToeVid from "./videos/tictactoe.webm";
+// import kanbanVid from "./videos/kanban.webm";
+// import codingQuizVid from "./videos/coding-quiz.webm";
+// import commentsSectionVid from "./videos/comments-section.webm";
+// import dropdownVid from "./videos/dropdown.webm";
+// import ghUserSearchVid from "./videos/gh-user-search.webm";
+// import reactLandingPageVid from "./videos/react-landing-page.webm";
+// import passGenVid from "./videos/pass-gen.webm";
+// import adviceGenVid from "./videos/advice-gen.webm";
+// import weatherDashVid from "./videos/weather-dash.webm";
 
 export default [
   {
@@ -60,7 +60,7 @@ export default [
       technologies: ["HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: weatherDashVid,
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/weather-dashboard/main/assets/images/screen1.png",
   },
@@ -115,7 +115,7 @@ export default [
       technologies: ["HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: passGenVid,
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/password-generator/main/Develop/assets/images/RPG.png",
   },
@@ -191,7 +191,7 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: adviceGenVid,
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/advice-generator/main/src/images/advice-gen.png",
   },
@@ -223,7 +223,7 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: dropdownVid,
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/dropdown-challenge/main/src/images/screen1.png",
   },
@@ -239,7 +239,7 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: ghUserSearchVid,
+    video: "",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/github-user-search/main/src/assets/screen1.png",
   },
@@ -256,7 +256,8 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: reactLandingPageVid,
+    video:
+      "https://drive.google.com/file/d/1uwmI0Kg_Q2ui-_egAREaEAxp_FUCxMVM/preview",
     backgroundImage:
       "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
   },
@@ -327,7 +328,7 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript", "Node", "Express"],
       gallery: [],
     },
-    video: commentsSectionVid,
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/interactive-comments-section/blob/main/screen1.png?raw=true",
   },
@@ -343,7 +344,7 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: codingQuizVid,
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/coding-quiz-pro/blob/main/src/screen1.png?raw=true",
   },
@@ -369,7 +370,7 @@ export default [
       ],
       gallery: [],
     },
-    video: kanbanVid,
+    video: "",
     backgroundImage:
       "https://github.com/rrich-kray/kanban-board-full-stack/blob/main/screen1.png?raw=true",
   },
@@ -385,7 +386,7 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: ticTacToeVid,
+    video: "",
     backgroundImage: ticTacToe,
   },
   // {
