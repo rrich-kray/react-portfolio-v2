@@ -36,6 +36,10 @@
     padding: 30px
 }
 
+.header-right-panel {
+    justify-content: flex-start;
+}
+
 .header-panel h1,
 .header-panel p {
     color: white
@@ -52,6 +56,10 @@
     color: white
 }
 
+.description-container {
+    margin-top: 50px
+}
+
 .description-container,
 .technologies-container,
 .gallery-container {
@@ -62,7 +70,9 @@
 }
 
 .project-header {
-    flex: 0.5
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
 }
 
 .technologies {
@@ -75,14 +85,55 @@
     height: 75px;
     width: 75px;
     margin: 10px;
+    position: relative;
+}
+
+.technology-icon {
+    position: relative;
+    transition: 0.25s ease-in;
+}
+
+.technology-label {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    margin-top: auto;
+    right: 0;
+    margin-right: auto;
+    left: 0;
+    margin-left: auto;
+    bottom: 0;
+    margin-bottom: auto;
+    z-index: 3;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.25s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon-container img {
     height: 100%
 }
 
+.icon-container:hover .technology-icon {
+    transform: rotate(360deg)
+}
+
+.icon-container:hover .technology-label {
+    top: -150%;
+    /* font-size: 1.5rem; */
+    opacity: 1
+}
+
 .description,
 .technologies,
 .gallery {
-    flex: 1
+    flex: 1;
+    padding-right: 50px;
+    /* padding-top: 10px; */
+    padding-left: 30px;
+    border-left: 1px solid white
 }

@@ -81,18 +81,40 @@ const AboutRedux = () => {
           </div>
         </div>
         <div
-          className="linkedIn-container text-container"
+          className="contact-container text-container"
           style={{ marginTop: "50px" }}
         >
-          <h1>LinkedIn</h1>
-          <span>https://www.linkedin.com/in/ryankray/</span>
-        </div>
-        <div
-          className="email-container text-container"
-          style={{ marginTop: "50px" }}
-        >
-          <h1>Email</h1>
-          <span>rrich.kray.93@gmail.com</span>
+          <h1>Contact</h1>
+          <div className="link-container">
+            <a href="https://github.com/rrich-kray/" alt="github-link">
+              <img
+                src={require("./gh.svg").default}
+                alt="gh-icon"
+                style={{
+                  height: "75px",
+                  padding: "10px;",
+                  marginRight: "10px",
+                }}
+              ></img>
+            </a>
+            <a href="https://www.linkedin.com/in/ryankray/" alt="linkedIn-link">
+              <img
+                src={require("./linkedin.svg").default}
+                alt="linkedIn-icon"
+                style={{ height: "90px", padding: "10px" }}
+              ></img>
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1gzlYNrQPsWXRgWO9sgm8WkaF6DgDphDc/edit?usp=sharing&ouid=108149335393344460606&rtpof=true&sd=true"
+              alt="linkedIn-link"
+            >
+              <img
+                src="https://www.svgrepo.com/show/262734/curriculum-vitae-resume.svg"
+                alt="resume-icon"
+                style={{ height: "90px", padding: "10px" }}
+              ></img>
+            </a>
+          </div>
         </div>
       </div>
     </div>

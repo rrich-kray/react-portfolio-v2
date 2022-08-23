@@ -19,8 +19,9 @@ export default [
     deploymentLink: "",
     summary: "Node.js application that stores employee data.",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "Employee Tracker provides users a means to store, view, update and delete employee, department and role data. While challenging, this was a great opportunity to work with a relational database and its API without the need for any front-end integration. That said, I do intend to integrate this application into a React-built front-end and deploy it in the near future.",
+      technologies: ["Node", "Express", "SQL", "MySQL", "JavaScript"],
       gallery: [],
     },
     video: "",
@@ -35,8 +36,9 @@ export default [
     summary:
       "Node.js application that programmatically generates HTML containing a team profile",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "Programmatically generate profiles for all of your employees! This project was built so that users can quickly and easily produce a high-quality, single-page web application that displays a team profile in a simple format. It also served as an excellent introduction to Node.js and several of its packages (including inquirer and fs). Presently, I consider this an MVP build, and plan to introduce additional features and improvements in the future including better code modularization and more detailed employee profiles. I will likely also make improvements to the application's fairly minimalist UI.",
+      technologies: ["Node", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: "",
@@ -51,8 +53,11 @@ export default [
     summary:
       "Dashboard that displays current and forecasted weather data from the OpenWeatherMap API",
     info: {
-      description: "",
-      technologies: [],
+      description: `Weather dashboard was created so that users can obtain weather for any city in the United States. While this served as a great introductory experience to third-party APIs, I believe there exists significant room for improvement in this application, including:
+      Refactoring the codebase to adhere more closely to the SOLID framework for better readability and maintainability;
+      fixing formatting in some areas to prevent element overlap and to make the application more mobile-friendly; expanded customization for users;
+      and more robust user input validation.`,
+      technologies: ["HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: weatherDashVid,
@@ -67,8 +72,9 @@ export default [
     summary:
       "Programmatically generates professional README files using Node.js.",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "This project uses the inquirer node package to generate a professional README file for your project! Simply answer the prompts provided, and the apploication will output a fully-formatted, professional README file for you.",
+      technologies: ["Node", "JavaScript"],
       gallery: [],
     },
     video: "",
@@ -104,8 +110,9 @@ export default [
     deploymentLink: "https://rrich-kray.github.io/password-generator/",
     summary: "Generates a random password of specified length and content.",
     info: {
-      description: "",
-      technologies: [],
+      description: `The Random Password Generator was designed with simplicity of use in mind. By pressing the 'generate password' button, the user will be presented with a series of prompts that allows them to customize their password. The first prompt allows the user to specify the length of the password. All lengths between 8 characters and 128 characters are valid. The next prompt allows the user to specify the actual content of the password. The user can specify 1 and 2 to include lowercase and uppercase alphabetical characters, respectively, 3 for special characters and 4 for numbers. Users can include any combination of these options.
+        If invalid input is provided, the user will be presented with the following prompt and must reenter their input.`,
+      technologies: ["HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: passGenVid,
@@ -143,7 +150,7 @@ export default [
     summary: "Database for a hypothetical ecommerce website.",
     info: {
       description: "",
-      technologies: [],
+      technologies: ["Node", "JavaScript", "Express"],
       gallery: [],
     },
     video: "",
@@ -179,7 +186,8 @@ export default [
     deploymentLink: "https://advice-generator-rrich-kray.herokuapp.com/",
     summary: "Simple random quote generator that utilizes the Advice Slip API",
     info: {
-      description: "",
+      description:
+        "This was a Frontend Mentor challenge that I used to refresh myself on fetching data from third-party APIs. The UI was built using React, and it uses the Advice Slip API to generate random quotes.",
       technologies: [],
       gallery: [],
     },
@@ -194,7 +202,8 @@ export default [
     deploymentLink: "https://expenses-chart-rrich-kray.herokuapp.com/",
     summary: "Simple expenses chart",
     info: {
-      description: "",
+      description:
+        "This was another Frontend Mentor challenge that I took upon myself to both improve my CSS acumen and get more experience with the Recharts React library. Design belongs to frontendmentor.io",
       technologies: [],
       gallery: [],
     },
@@ -209,8 +218,9 @@ export default [
     deploymentLink: "https://dropdown-challenge-rrich-kray.herokuapp.com/",
     summary: "Simple landing page with dropdown navigation menus",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "Another quick challenge from Frontend Mentor, intended to improve my skills with CSS and more specifically the implementation of dropdown menus. Built with React.",
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: dropdownVid,
@@ -224,7 +234,8 @@ export default [
     deploymentLink: "https://github-search-rrich-kray.herokuapp.com/",
     summary: "Simple application that queries GitHub's User API",
     info: {
-      description: "",
+      description:
+        "A React-built SPA that allows users to query the GitHub User API to display GitHub user information. I developed this application immediately after the conclusion of my bootcamp as a means to refresh myself on making fetch requests to third-party APIs. In its current build, the application simply allows the user to search GitHub by username and user information about that user.",
       technologies: [],
       gallery: [],
     },
@@ -240,8 +251,9 @@ export default [
     deploymentLink: "https://react-landing-page-nine.vercel.app/",
     summary: "Landing page built with React",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "A React SPA landing page, undertaken to sharpen my design and CSS acumen.",
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: reactLandingPageVid,
@@ -266,8 +278,9 @@ export default [
     deploymentLink: "https://kanban-board-rrich-kray.herokuapp.com/",
     summary: "Kanban board PWA built with React",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "A kanboard app undertaken as a quick exercise in React state management. As such, the app only consists of a frontend. Tasks are stored using local storage.",
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: "",
@@ -281,8 +294,19 @@ export default [
     deploymentLink: "",
     summary: "Full-stack implementation of my Expenses Chart project",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "This is an upgraded version of my original expenses chart application (GitHub found here: https://github.com/rrich-kray/expenses-chart), which is based on a frontendmentor.io challenge of the same name. I've always been interested in data visualization, and this project will serve as a great stepping stone a larger and more complex data visualization dashboard that I plan on undertaking in the near future.",
+      technologies: [
+        "React",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node",
+        "Express",
+        "SQL",
+        "MySQL",
+        "Sequelize",
+      ],
       gallery: [],
     },
     video: "",
@@ -296,10 +320,11 @@ export default [
     deploymentLink:
       "https://comments-section-client-aqwq695xr-rrich-kray.vercel.app/",
     summary:
-      "Single comment section that allows users to login, register, add comments and upvote/downvote comments. Most prominent technologies include React, Express, SQL, Sequelize and a REST API",
+      "Single comment section that allows users to login, register, add comments and upvote/downvote comments.",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "Yet another frontendmentor.io challenge, undertaken to give myself more practice with REST APIs as well as user authentication systems. This was a fun one, particularly because it was my first solo experience building and implementing an upvote/downvote system in a webapp. That said, it's still bare-bones, and in its current build is missing functionality for deleting comments.",
+      technologies: ["React", "HTML", "CSS", "JavaScript", "Node", "Express"],
       gallery: [],
     },
     video: commentsSectionVid,
@@ -311,11 +336,11 @@ export default [
     name: "Coding Quiz Pro",
     ghRepository: "https://github.com/rrich-kray/coding-quiz-optimized",
     deploymentLink: "https://codinq-quiz-6gl6ze7ah-rrich-kray.vercel.app/",
-    summary:
-      "Improved version of my original coding quiz app. Utilizes React, HTML/CSS/JS",
+    summary: "Improved version of my original coding quiz app.",
     info: {
-      description: "",
-      technologies: [],
+      description:
+        "I always find it fun to revisit and improve upon old projects, and this app was no different. Based off of my original coding quiz application (GitHub found here: https://github.com/rrich-kray/coding-quiz.git), Coding Quiz Pro is a simple app designed to quiz users on programming-related concepts. In its current build, the application provides the user 60 seconds to answer five questions. Correct and incorrect responses increment and decrement the user's score, respectively, and the user is given the opportunity to record his initials along with his score at the conclusion of the quiz.    ",
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: codingQuizVid,
@@ -329,7 +354,8 @@ export default [
     deploymentLink: "https://kanban-board-lyart.vercel.app/dashboard",
     summary: "Improved version of my original Kanban Board PWA app.",
     info: {
-      description: "",
+      description:
+        "I originally intended this project to only consist of a frontend, but later decided to expand it in order to give myself additional experience with REST APIs. In any case, this was a great exercise in developing some new CSS skills and learning how to embed videos in React applications. In its current build, users can create an account, login, create and delete both task boards and associated tasks.",
       technologies: [
         "React",
         "HTML",
@@ -339,6 +365,7 @@ export default [
         "MySQL",
         "Sequelize",
         "Express",
+        "Node",
       ],
       gallery: [],
     },
@@ -355,7 +382,7 @@ export default [
     info: {
       description:
         "This application allows users to challenge other individuals to a simple game of tic-tac-toe. It was intended to provide me a relatively easy introduction to the Next.js framework. This was also my first experience deploying the application on Vercel. If I decide to revisit the app in the future, I plan on providing users the option to play against a CPU opponent, which in all likelihood would only be a random tile selector.",
-      technologies: ["React", "Vercel", "HTML", "CSS", "JavaScript"],
+      technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: ticTacToeVid,

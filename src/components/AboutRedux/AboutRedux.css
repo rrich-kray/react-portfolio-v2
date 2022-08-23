@@ -56,3 +56,8 @@
     width: 75px;
     margin: 20px
 }
+
+.link-container {
+    display: flex;
+    align-items: center;
+}

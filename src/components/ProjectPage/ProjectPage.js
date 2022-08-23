@@ -15,9 +15,9 @@ const ProjectPage = ({ projectData, setActivePost }) => {
         <div className="header-left-panel header-panel">
           <h1>{projectData.name}</h1>
         </div>
-        <div className="header-right-panel header-panel">
+        {/* <div className="header-right-panel header-panel">
           <p>{projectData.summary}</p>
-        </div>
+        </div> */}
       </div>
       <div className="vid-container">
         {projectData.video === "" ? (
@@ -56,11 +56,12 @@ const ProjectPage = ({ projectData, setActivePost }) => {
                   className="technology-icon"
                   src={iconMappings[technology]}
                 ></img>
+                <span className="technology-label">{technology}</span>
               </div>
             ))}
           </div>
         </div>
-        <div className="gallery-container info-container">
+        {/* <div className="gallery-container info-container">
           <div className="gallery-header project-header">
             <h1>Screenshots</h1>
           </div>
@@ -71,7 +72,7 @@ const ProjectPage = ({ projectData, setActivePost }) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

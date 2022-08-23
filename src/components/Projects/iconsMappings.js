@@ -9,6 +9,7 @@ const iconMappings = {
   Sequelize: "https://www.svgrepo.com/show/354333/sequelize.svg",
   Express: "https://www.svgrepo.com/show/353724/express.svg",
   Vercel: "https://www.svgrepo.com/show/361653/vercel-logo.svg",
+  Node: "https://www.svgrepo.com/show/378837/node.svg",
 };
 
 export default iconMappings;
