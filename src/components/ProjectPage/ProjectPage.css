@@ -47,12 +47,25 @@
     width: 100%
 }
 
-.description-container {
-    width: 100%;
-    padding: 50px;
+.body-container h1,
+.body-container p {
+    color: white
 }
 
-.description-container p {
-    color: white;
-    font-size: 1.5rem
+.description-container,
+.technologies-container,
+.gallery-container {
+    width: 100%;
+    display: flex;
+    padding: 20px
+}
+
+.project-header {
+    flex: 0.5
+}
+
+.description,
+.technologies,
+.gallery {
+    flex: 1
 }

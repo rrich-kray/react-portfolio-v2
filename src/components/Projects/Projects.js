@@ -4,16 +4,8 @@ import data from "./data";
 import Tile from "../Tile/Tile";
 
 const Projects = ({ setActivePost }) => {
+  console.log(data);
   const [offset, setOffset] = useState(0);
-
-  // useEffect(() => {
-  //   const onScroll = (e) => {
-  //     setOffset(e.deltaY);
-  //   };
-
-  //   window.addEventListener("wheel", onScroll);
-  // });
-
   return (
     <div id="projects">
       <div id="projects-container-left">
@@ -22,16 +14,7 @@ const Projects = ({ setActivePost }) => {
       <div id="projects-container-right">
         {data.map((project, i) => (
           <div className="tile-wrapper" style={{ "--i": i }}>
-            <Tile
-              name={project.name}
-              summary={project.summary}
-              description={project.description}
-              background={project.backgroundImage}
-              gh={project.ghRepository}
-              video={project.video}
-              deploy={project.deploymentLink}
-              setActivePost={setActivePost}
-            />
+            <Tile projectData={project} setActivePost={setActivePost} />
           </div>
         ))}
       </div>
@@ -42,4 +25,3 @@ const Projects = ({ setActivePost }) => {
 // 090258
 
 export default Projects;
-// Add description to prjects page

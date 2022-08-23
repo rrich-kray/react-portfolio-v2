@@ -1,44 +1,24 @@
 import React from "react";
 import "./Tile.css";
 
-const Tile = ({
-  name,
-  background,
-  description,
-  summary,
-  gh,
-  video,
-  deploy,
-  setActivePost,
-}) => {
-  const setActivePostFunc = () => {
-    setActivePost({
-      name: name,
-      background: background,
-      summary: summary,
-      description: description,
-      video: video,
-      gh: gh,
-      deploy: deploy,
-    });
-  };
-
+const Tile = ({ projectData, setActivePost }) => {
+  console.log(projectData);
   return (
     <div
       className="tile"
       style={{
-        backgroundImage: `url('${background}')`,
+        backgroundImage: `url('${projectData.backgroundImage}')`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      onClick={() => setActivePostFunc()}
+      onClick={() => setActivePost(projectData)}
     >
       <div className="tile-overlay">
-        <h1>{name}</h1>
-        <p>{summary}</p>
-        <a href={gh}>GitHub</a>
-        {deploy && <a href={deploy}>Deployed</a>}
+        <h1>{projectData.name}</h1>
+        <p>{projectData.summary}</p>
+        <a href={projectData.gh}>GitHub</a>
+        {projectData.deploy && <a href={projectData.deploy}>Deployed</a>}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ReactPlayer from "react-player";
 
 const ProjectPage = ({ projectData, setActivePost }) => {
-  console.log(projectData.video);
+  console.log(projectData);
   return (
     <div className="project-page">
       <div className="arrow-back-icon" onClick={() => setActivePost([])}>
@@ -23,7 +23,7 @@ const ProjectPage = ({ projectData, setActivePost }) => {
           <div
             className="wallpaper-container"
             style={{
-              backgroundImage: `url('${projectData.background}')`,
+              backgroundImage: `url('${projectData.backgroundImage}')`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -36,13 +36,32 @@ const ProjectPage = ({ projectData, setActivePost }) => {
         )}
       </div>
       <div className="body-container">
-        <div className="description-gallery-container">
-          <div className="gallery-container"></div>
-          <div className="description-container">
-            <p>{projectData.description}</p>
+        <div className="description-container info-container">
+          <div className="description-header project-header">
+            <h1>Description</h1>
+          </div>
+          <div className="description">
+            <p>{projectData.info.description}</p>
           </div>
         </div>
-        <div className="link-container"></div>
+        <div className="technologies-container info-container">
+          <div className="technologies-header project-header">
+            <h1>Technologies</h1>
+          </div>
+          <div className="technologies">{projectData.info.technologies}</div>
+        </div>
+        <div className="gallery-container info-container">
+          <div className="gallery-header project-header">
+            <h1>Screenshots</h1>
+          </div>
+          <div className="gallery">
+            {projectData.info.gallery.map((image) => (
+              <div className="image-container">
+                <img src={image} className="image" />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
