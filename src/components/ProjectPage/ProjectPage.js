@@ -8,7 +8,7 @@ const ProjectPage = ({ projectData, setActivePost }) => {
   return (
     <div className="project-page">
       <div className="arrow-back-icon" onClick={() => setActivePost([])}>
-        <ArrowBackIcon />
+        <ArrowBackIcon style={{ width: "100%" }} />
       </div>
       <div className="header">
         <div className="header-left-panel header-panel">
@@ -36,8 +36,11 @@ const ProjectPage = ({ projectData, setActivePost }) => {
         )}
       </div>
       <div className="body-container">
-        <div className="description-container">
-          <p>{projectData.description}</p>
+        <div className="description-gallery-container">
+          <div className="gallery-container"></div>
+          <div className="description-container">
+            <p>{projectData.description}</p>
+          </div>
         </div>
         <div className="link-container"></div>
       </div>

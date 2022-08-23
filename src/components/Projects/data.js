@@ -279,8 +279,7 @@ export default [
     name: "Tic Tac Toe",
     ghRepository: "https://github.com/rrich-kray/tic-tac-toe",
     deploymentLink: "https://tic-tac-toe-eight-weld.vercel.app/",
-    summary:
-      "Improved version of my original Kanban Board PWA app. Utilizes React, HTML/CSS/JS, SQL, MySQL, Sequelize, Express.",
+    summary: "Simple tic-tac-toe application, built with Next.js",
     description: "",
     video: ticTacToeVid,
     backgroundImage: ticTacToe,

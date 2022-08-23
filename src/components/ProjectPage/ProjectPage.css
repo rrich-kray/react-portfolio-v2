@@ -5,12 +5,14 @@
 }
 
 .arrow-back-icon {
-    position: absolute;
+    position: fixed;
     top: 5%;
     left: 5%;
     height: 75px;
     width: 75px;
-    backgrounD: white
+    background: rgba(100, 100, 100);
+    border-radius: 50%;
+    cursor: pointer
 }
 
 .arrow-back-icon :nth-child(1) {
