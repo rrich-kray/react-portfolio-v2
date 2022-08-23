@@ -20,7 +20,7 @@ export default [
     summary: "Node.js application that stores employee data.",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: "",
@@ -36,7 +36,7 @@ export default [
       "Node.js application that programmatically generates HTML containing a team profile",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: "",
@@ -52,7 +52,7 @@ export default [
       "Dashboard that displays current and forecasted weather data from the OpenWeatherMap API",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: weatherDashVid,
@@ -68,7 +68,7 @@ export default [
       "Programmatically generates professional README files using Node.js.",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: "",
@@ -105,7 +105,7 @@ export default [
     summary: "Generates a random password of specified length and content.",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: passGenVid,
@@ -143,7 +143,7 @@ export default [
     summary: "Database for a hypothetical ecommerce website.",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: "",
@@ -180,7 +180,7 @@ export default [
     summary: "Simple random quote generator that utilizes the Advice Slip API",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: adviceGenVid,
@@ -195,7 +195,7 @@ export default [
     summary: "Simple expenses chart",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: "",
@@ -210,7 +210,7 @@ export default [
     summary: "Simple landing page with dropdown navigation menus",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: dropdownVid,
@@ -225,7 +225,7 @@ export default [
     summary: "Simple application that queries GitHub's User API",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: ghUserSearchVid,
@@ -241,7 +241,7 @@ export default [
     summary: "Landing page built with React",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: reactLandingPageVid,
@@ -267,7 +267,7 @@ export default [
     summary: "Kanban board PWA built with React",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: "",
@@ -282,7 +282,7 @@ export default [
     summary: "Full-stack implementation of my Expenses Chart project",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: "",
@@ -299,7 +299,7 @@ export default [
       "Single comment section that allows users to login, register, add comments and upvote/downvote comments. Most prominent technologies include React, Express, SQL, Sequelize and a REST API",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: commentsSectionVid,
@@ -315,7 +315,7 @@ export default [
       "Improved version of my original coding quiz app. Utilizes React, HTML/CSS/JS",
     info: {
       description: "",
-      technologies: "",
+      technologies: [],
       gallery: [],
     },
     video: codingQuizVid,
@@ -330,7 +330,16 @@ export default [
     summary: "Improved version of my original Kanban Board PWA app.",
     info: {
       description: "",
-      technologies: "React, HTML/CSS/JS, SQL, MySQL, Sequelize, Express.",
+      technologies: [
+        "React",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SQL",
+        "MySQL",
+        "Sequelize",
+        "Express",
+      ],
       gallery: [],
     },
     video: kanbanVid,
@@ -346,7 +355,7 @@ export default [
     info: {
       description:
         "This application allows users to challenge other individuals to a simple game of tic-tac-toe. It was intended to provide me a relatively easy introduction to the Next.js framework. This was also my first experience deploying the application on Vercel. If I decide to revisit the app in the future, I plan on providing users the option to play against a CPU opponent, which in all likelihood would only be a random tile selector.",
-      technologies: "Next.js, React.js, Vercel, HTML/CSS/JS",
+      technologies: ["React", "Vercel", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video: ticTacToeVid,

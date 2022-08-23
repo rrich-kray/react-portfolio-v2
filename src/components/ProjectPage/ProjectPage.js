@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./ProjectPage.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ReactPlayer from "react-player";
+import iconMappings from "../Projects/iconsMappings.js";
 
 const ProjectPage = ({ projectData, setActivePost }) => {
   console.log(projectData);
@@ -38,7 +39,7 @@ const ProjectPage = ({ projectData, setActivePost }) => {
       <div className="body-container">
         <div className="description-container info-container">
           <div className="description-header project-header">
-            <h1>Description</h1>
+            <h1>About</h1>
           </div>
           <div className="description">
             <p>{projectData.info.description}</p>
@@ -48,7 +49,16 @@ const ProjectPage = ({ projectData, setActivePost }) => {
           <div className="technologies-header project-header">
             <h1>Technologies</h1>
           </div>
-          <div className="technologies">{projectData.info.technologies}</div>
+          <div className="technologies">
+            {projectData.info.technologies.map((technology) => (
+              <div className="icon-container">
+                <img
+                  className="technology-icon"
+                  src={iconMappings[technology]}
+                ></img>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="gallery-container info-container">
           <div className="gallery-header project-header">

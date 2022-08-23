@@ -18,7 +18,9 @@ const Tile = ({ projectData, setActivePost }) => {
         <h1>{projectData.name}</h1>
         <p>{projectData.summary}</p>
         <a href={projectData.gh}>GitHub</a>
-        {projectData.deploy && <a href={projectData.deploy}>Deployed</a>}
+        {projectData.deploymentLink && (
+          <a href={projectData.deploymentLink}>Deployed</a>
+        )}
       </div>
     </div>
   );

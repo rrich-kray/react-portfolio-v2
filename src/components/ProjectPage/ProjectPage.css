@@ -57,11 +57,28 @@
 .gallery-container {
     width: 100%;
     display: flex;
-    padding: 20px
+    padding: 20px;
+    min-height: 250px
 }
 
 .project-header {
     flex: 0.5
+}
+
+.technologies {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+.icon-container { 
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+}
+
+.icon-container img {
+    height: 100%
 }
 
 .description,
