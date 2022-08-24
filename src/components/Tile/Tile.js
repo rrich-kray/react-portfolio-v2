@@ -12,7 +12,7 @@ const Tile = ({ projectData, setActivePost }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
-      // onClick={() => setActivePost(projectData)}
+      onClick={() => setActivePost(projectData)}
     >
       <div className="tile-overlay">
         <h1>{projectData.name}</h1>

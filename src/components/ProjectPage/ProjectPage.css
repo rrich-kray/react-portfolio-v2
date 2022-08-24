@@ -48,8 +48,21 @@
 
 .vid-container,
 .wallpaper-container {
-    height: 75vh;
+    min-height: 75vh;
     width: 100%
+}
+
+.iframe-wrapper {
+    /* height: 25vh; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iframe-wrapper iframe {
+    width: 100vw; 
+    height: 56.25vw;
 }
 
 .body-container h1,

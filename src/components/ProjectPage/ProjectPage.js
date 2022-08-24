@@ -31,9 +31,9 @@ const ProjectPage = ({ projectData, setActivePost }) => {
             }}
           ></div>
         ) : (
-          <video width="100%" height="100%" controls>
-            <source src={projectData.video} type="video/webm" />
-          </video>
+          <div className="iframe-wrapper">
+            <iframe src={projectData.video} allow="autoplay"></iframe>
+          </div>
         )}
       </div>
       <div className="body-container">

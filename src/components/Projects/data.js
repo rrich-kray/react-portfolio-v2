@@ -191,7 +191,8 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: "",
+    video:
+      "https://drive.google.com/file/d/1PP798s9YQQ7SqsxkoaoQShb4Da_uZGPR/preview",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/advice-generator/main/src/images/advice-gen.png",
   },
@@ -223,7 +224,8 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: "",
+    video:
+      "https://drive.google.com/file/d/1FOYw_D_26gpm7vDVXSEzOB6aIYWpnNHY/preview",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/dropdown-challenge/main/src/images/screen1.png",
   },
@@ -386,7 +388,8 @@ export default [
       technologies: ["React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: "",
+    video:
+      "https://drive.google.com/file/d/1eg02d97AUr3ylTYKVwEMk85YumboJdOl/preview",
     backgroundImage: ticTacToe,
   },
   // {
