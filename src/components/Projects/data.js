@@ -60,7 +60,8 @@ export default [
       technologies: ["HTML", "CSS", "JavaScript"],
       gallery: [],
     },
-    video: "",
+    video:
+      "https://drive.google.com/file/d/13U4nIFZXdIHBzKV-3xD_gXuo5GVhZNj9/preview",
     backgroundImage:
       "https://raw.githubusercontent.com/rrich-kray/weather-dashboard/main/assets/images/screen1.png",
   },
