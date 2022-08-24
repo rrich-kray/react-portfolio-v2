@@ -52,12 +52,14 @@ const ProjectPage = ({ projectData, setActivePost }) => {
               >
                 GitHub Repository
               </a>
-              <a
-                href={projectData.deploymentLink}
-                style={{ marginBottom: "20px" }}
-              >
-                Production Version
-              </a>
+              {projectData.deploymentLink && (
+                <a
+                  href={projectData.deploymentLink}
+                  style={{ marginBottom: "20px" }}
+                >
+                  Production Version
+                </a>
+              )}
             </div>
           </div>
         </div>
