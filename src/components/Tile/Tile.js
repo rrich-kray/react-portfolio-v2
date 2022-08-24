@@ -17,10 +17,10 @@ const Tile = ({ projectData, setActivePost }) => {
       <div className="tile-overlay">
         <h1>{projectData.name}</h1>
         <p>{projectData.summary}</p>
-        <a href={projectData.ghRepository}>GitHub</a>
+        {/* <a href={projectData.ghRepository}>GitHub</a>
         {projectData.deploymentLink && (
           <a href={projectData.deploymentLink}>Deployed</a>
-        )}
+        )} */}
       </div>
     </div>
   );
