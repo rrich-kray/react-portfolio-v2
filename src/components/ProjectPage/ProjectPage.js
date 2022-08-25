@@ -72,7 +72,13 @@ const ProjectPage = ({ projectData, setActivePost }) => {
               <div className="icon-container">
                 <img
                   className="technology-icon"
-                  src={iconMappings[technology]}
+                  src={
+                    iconMappings[
+                      technology.match(/(Apollo)/g)
+                        ? technology.split(" ").join("")
+                        : technology
+                    ]
+                  }
                 ></img>
                 <span className="technology-label">{technology}</span>
               </div>

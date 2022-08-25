@@ -10,6 +10,11 @@ const iconMappings = {
   Express: "https://www.svgrepo.com/show/353724/express.svg",
   Vercel: "https://www.svgrepo.com/show/361653/vercel-logo.svg",
   Node: "https://www.svgrepo.com/show/378837/node.svg",
+  GraphQL: "https://www.svgrepo.com/show/353834/graphql.svg",
+  ApolloClient:
+    "https://aws1.discourse-cdn.com/business5/uploads/apollographql/original/1X/25bd5104d61020fe4dc0777a5919cd009bca633e.png",
+  ApolloServer:
+    "https://aws1.discourse-cdn.com/business5/uploads/apollographql/original/1X/25bd5104d61020fe4dc0777a5919cd009bca633e.png",
 };
 
 export default iconMappings;

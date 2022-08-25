@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 import ticTacToe from "../../assets/images/tic-tac-toe.png";
+import mernBlog from "../../assets/images/mern-blog.png";
 // import ticTacToeVid from "./videos/tictactoe.webm";
 // import kanbanVid from "./videos/kanban.webm";
 // import codingQuizVid from "./videos/coding-quiz.webm";
@@ -392,6 +393,31 @@ export default [
     video:
       "https://drive.google.com/file/d/1eg02d97AUr3ylTYKVwEMk85YumboJdOl/preview",
     backgroundImage: ticTacToe,
+  },
+  {
+    id: 25,
+    name: "Blog Site",
+    ghRepository: "https://github.com/rrich-kray/mern-blog",
+    deploymentLink: "https://blog-client-rrich.herokuapp.com/",
+    summary:
+      "Full stack blog website, built with React on the front end, and express/SQL/Seqeulize on the backend. Utilizes GraphQL for its API.",
+    info: {
+      description:
+        "This project was my first real opportunity to independently build an app with a GraphQL API. While challenging, ",
+      technologies: [
+        "React",
+        "Node",
+        "GraphQL",
+        "Apollo Client",
+        "Apollo Server",
+        "HTML",
+        "CSS",
+        "JavaScript",
+      ],
+      gallery: [],
+    },
+    video: "",
+    backgroundImage: mernBlog,
   },
   // {
   //   id: 24,
