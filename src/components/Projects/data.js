@@ -403,7 +403,7 @@ export default [
       "Full stack blog website, built with React on the front end, and express/SQL/Seqeulize on the backend. Utilizes GraphQL for its API.",
     info: {
       description:
-        "This project was my first real opportunity to independently build an app with a GraphQL API. While challenging, ",
+        "This project was my first real opportunity to independently build an app with a GraphQL API. While challenging, I found that I enjoy many aspects of GraphQL APIs, including its single endpoint architecture and greater querying flexibility relative to traditional REST APIs. Frontend design belongs to Ruslan Siiz. You can find it here on Dribbble: https://dribbble.com/shots/17554693-365-Magazine?utm_source=Clipboard_Shot&utm_campaign=RuslanSiiz&utm_content=365%20Magazine&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=RuslanSiiz&utm_content=365%20Magazine&utm_medium=Social_Share",
       technologies: [
         "React",
         "Node",
