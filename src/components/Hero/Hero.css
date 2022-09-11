@@ -15,15 +15,16 @@
 
 #hero-container-left :nth-child(1) {
     display: flex;
+    opacity: 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    animation: fadeIn 0.5s linear
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1s
 }
 
 @keyframes fadeIn {
     0% {
-        opacity: 0;
         transform: translateY(15%)
     }
 

@@ -27,23 +27,25 @@ function App() {
       {isLoading ? (
         <Splash />
       ) : (
-        <div id="app">
-          {activePost.length !== 0 ? (
-            <ProjectPage
-              projectData={activePost}
-              setActivePost={setActivePost}
-            />
-          ) : (
-            <>
-              {/* <Nav /> */}
-              <Hero />
-              <Projects setActivePost={setActivePost} />
-              <AboutRedux />
-              {/* <About /> */}
-              {/* <Skills /> */}
-              {/* <Contact /> */}
-            </>
-          )}
+        <div className="wrapper">
+          <div id="app">
+            {activePost.length !== 0 ? (
+              <ProjectPage
+                projectData={activePost}
+                setActivePost={setActivePost}
+              />
+            ) : (
+              <>
+                {/* <Nav /> */}
+                <Hero />
+                <Projects setActivePost={setActivePost} />
+                <AboutRedux />
+                {/* <About /> */}
+                {/* <Skills /> */}
+                {/* <Contact /> */}
+              </>
+            )}
+          </div>
         </div>
       )}
     </>
