@@ -36,7 +36,7 @@ function App() {
           ) : (
             <>
               {/* <Nav /> */}
-              {/* <Hero /> */}
+              <Hero />
               <Projects setActivePost={setActivePost} />
               <AboutRedux />
               {/* <About /> */}

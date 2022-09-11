@@ -1,7 +1,8 @@
 #hero {
     height: 100vh;
     width: 100vw;
-    display: flex
+    display: flex;
+    /* background: white */
 }
 
 #hero-container-left {
@@ -12,22 +13,33 @@
     justify-content: center;
 }
 
-#hero-container-left h1 {
-    font-size: 3rem
-}
-
 #hero-container-left :nth-child(1) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: flex-start;
+    animation: fadeIn 0.5s linear
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+#hero-container-left h1 {
+    font-size: 3rem
+}
 
 #hero-container-right {
     flex: 1;
     display: flex;
-    flex-direction: center;
     align-items: center;
     justify-content: center;
 }
@@ -47,13 +59,18 @@
     font-weight: bold
 }
 
+.threejs-canvas {
+    height: 100%;
+    width: 100%;
+}
+
 /*
 ===============
 Animation
 ===============
 */
 
-.loader {
+/* .loader {
     position: relative;
     transform: skewY(-15deg) translateX(50px) translateY(50px);
     animation: animateColor 2.5s linear infinite;
@@ -69,7 +86,7 @@ Animation
     }
 }
 
-/* .loader::before {
+.loader::before {
     content: '';
     position: absolute;
     width: 300px;
@@ -79,7 +96,7 @@ Animation
     top: 300px;
     transform: skew(45deg);
     filter: blur(20px)
-} */
+}
 
 .loader span {
     position: relative;
@@ -139,4 +156,4 @@ Animation
 
 .loader span:hover::after {
     background: #2982b9
-}
+} */
