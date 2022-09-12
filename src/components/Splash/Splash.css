@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 .splash {
     height: 100vh;
@@ -28,7 +29,7 @@
 }
 
 .text {
-    font-family: 'Marck Script', cursive;
+    font-family: 'Courgette', cursive;
     position: relative;
     top: 90px;
     width: 1000px;
