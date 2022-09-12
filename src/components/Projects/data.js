@@ -1,6 +1,8 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 import ticTacToe from "../../assets/images/tic-tac-toe.png";
 import mernBlog from "../../assets/images/mern-blog.png";
+import recipes from "../../assets/images/recipes.png";
+import photoGallery from "../../assets/images/photo-gallery.png";
 // import ticTacToeVid from "./videos/tictactoe.webm";
 // import kanbanVid from "./videos/kanban.webm";
 // import codingQuizVid from "./videos/coding-quiz.webm";
@@ -265,17 +267,6 @@ export default [
     backgroundImage:
       "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
   },
-  // {
-  //   id: 18,
-  //   name: "MERN Blog",
-  //   ghRepository: "https://github.com/rrich-kray/mern-blog",
-  //   deploymentLink: "https://simple-react-site-rrich-kray.herokuapp.com/",
-  //   summary: "MERN stack blog website",
-  // info:  {},
-  // video: "",
-  //   backgroundImage:
-  //     "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
-  // },
   {
     id: 19,
     name: "Kanban Board PWA",
@@ -418,6 +409,56 @@ export default [
     },
     video: "",
     backgroundImage: mernBlog,
+  },
+  {
+    id: 26,
+    name: "Recipes Search Engine",
+    ghRepository: "https://github.com/rrich-kray/recipes",
+    deploymentLink: "https://recipes-client-69tei2z4x-rrich-kray.vercel.app/",
+    summary:
+      "Next.js application that utilizes the Spoonacular API and AWS Lambda to allow users to search for recipes with over 75 search criteria.",
+    info: {
+      description:
+        "Recipes utilizes the Spoonacular Recipes API to allow users to search for recipes using over 75 search criteria. All things considered, this project took much longer to get to the MVP stage than I had anticipated for a simple recipe search app, as I wanted to use it as an opportunity to gain familiarity with several new technologies, including TypeScript, Python and AWS Lambda, as well as learn a few new frontend tricks. In the future, I hope to extend this with its own server that provides user authentication capabilities, and also route those requests thorugh AWS Lambda.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Spoonacular Recipes API",
+        "Axios",
+        "AWS Lambda",
+        "Python",
+        "FastAPI",
+      ],
+      gallery: [],
+    },
+    video: "",
+    backgroundImage: recipes,
+  },
+  {
+    id: 27,
+    name: "Photo Gallery",
+    ghRepository: "https://github.com/rrich-kray/recipes",
+    deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/login",
+    summary:
+      "Photo gallery allows users to login/signup and upload photos to their own personal gallery.",
+    info: {
+      description:
+        "The frontend utilizes React, and React Router DOM allows users to navigate among the pages. In its current build, this only includes login/signup pages for unauthenticated users, and a dashboard page for authenticated users. JSON web tokens are used to for authentication. Files are uploaded to a single directory within the server using the fileUpload middleware. Images and Users and kept in seperate Sequelize tables and are linked via a foreign keys.",
+      technologies: [
+        "React.js",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Axios",
+        "Express.js",
+      ],
+      gallery: [],
+    },
+    video: "",
+    backgroundImage: photoGallery,
   },
   // {
   //   id: 24,
