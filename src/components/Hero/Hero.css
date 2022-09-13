@@ -39,6 +39,7 @@
 }
 
 #hero-container-right {
+    flex: 1;
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -47,6 +48,11 @@
     justify-content: center;
     animation: fadeIn 0.5s linear forwards;
     animation-delay: 2s;
+}
+
+#hero-container-right :nth-child(1) {
+    height: 100%;
+    width: 100%
 }
 
 @keyframes fadeIn {

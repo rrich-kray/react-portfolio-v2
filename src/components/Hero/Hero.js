@@ -42,10 +42,14 @@ extend({ UnrealBloomPass });
 // Simple house
 // Snow globe
 
+const spheres = ({ ...props }) => {};
+
 const Scene = (props) => {
   return (
     <group {...props} dispose={null}>
+      {/* <RigidBody type="fixed"> */}
       <Room />
+      {/* </RigidBody> */}
     </group>
   );
 };
@@ -55,24 +59,24 @@ const Hero = () => {
 
   return (
     <div id="hero">
-      {/* <div id="hero-container-left">
-        <div> */}
-      {/* <h1 style={{ color: "white" }}>Let's Build Something Great</h1> */}
-      {/* <button>
+      <div id="hero-container-left">
+        <div>
+          <h1 style={{ color: "white" }}>Let's Build Something Great</h1>
+          {/* <button>
             <a href="#about">Learn More</a>
           </button> */}
-      {/* </div>
-      </div> */}
-      <div id="hero-container-right">
-        <div className="hero-text-container">
-          <h1>Let's build something great</h1>
         </div>
-        <Canvas ref={canvasRef}>
+      </div>
+      <div id="hero-container-right">
+        {/* <div className="hero-text-container">
+          <h1>Let's build something great</h1>
+        </div> */}
+        <Canvas ref={canvasRef} camera={{ position: [0, 2, 5] }}>
           <Suspense fallback={null}>
             {/* <color attach="background" args={["#202030"]} /> */}
             <fog attach="fog" args={["#202030", 10, 25]} />
             <Physics>
-              <Scene position={[0, 0, 0]}></Scene>
+              <Scene position={[0, 0, 0]} rotate={[0, 0, 0]}></Scene>
             </Physics>
             <ambientLight args={[0xff0000]} intensity={0.1} />
             <directionalLight
@@ -87,10 +91,10 @@ const Hero = () => {
                 args={[-10, 10, 10, -10]}
               />
             </directionalLight>
-            <OrbitControls autoRotate={false} />
-            <Environment resolution={32}>
+            <OrbitControls autoRotate={true} />
+            {/* <Environment resolution={32}>
               <Lightformer position={[10, 10, 10]} scale={10} intensity={4} />
-            </Environment>
+            </Environment> */}
             {/* <Effects>
               <unrealBloomPass strength={0.1} radius={0.5} />
             </Effects> */}
