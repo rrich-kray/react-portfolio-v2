@@ -86,10 +86,7 @@ const Hero = () => {
               instensity={0.5}
               position={[0, 0, 5]}
             >
-              <orthographicCamera
-                attach="shadow-camera"
-                args={[-10, 10, 10, -10]}
-              />
+              <orthographicCamera attach="shadow-camera" args={[0, 0, 0, 0]} />
             </directionalLight>
             <OrbitControls autoRotate={true} />
             {/* <Environment resolution={32}>

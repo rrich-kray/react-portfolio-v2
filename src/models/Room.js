@@ -1,36 +1,38 @@
 import * as THREE from "three";
 import { useGLTF, Sparkles } from "@react-three/drei";
 import { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import { LayerMaterial, Depth, Fresnel } from "lamina";
 import { useControls } from "leva";
 
 export const Room = ({ props }) => {
   const [isCubeExpanded, setIsCubeExpanded] = useState(false);
-  const s1 = useRef();
-  const s2 = useRef();
-  const s3 = useRef();
-  const s4 = useRef();
-  const s5 = useRef();
-  const s6 = useRef();
+  const OFFSET = 0.08;
+
+  const state = useThree();
+  console.log(state);
 
   const expandCube = () => {
-    setIsCubeExpanded((isCubeExpanded) => !isCubeExpanded);
-    if (isCubeExpanded) {
-      s1.current.position.z += 2;
-      s2.current.position.z -= 2;
-      s3.current.position.z += 2;
-      s4.current.position.z -= 2;
-      s5.current.position.z += 2;
-      s6.current.position.z -= 2;
-    } else {
-      s1.current.position.z -= 2;
-      s2.current.position.z += 2;
-      s3.current.position.z -= 2;
-      s4.current.position.z += 2;
-      s5.current.position.z -= 2;
-      s6.current.position.z += 2;
-    }
+    const [s1, s2, s3, s4, s5, s6] =
+      state.scene.children[0].children[0].children;
+    let start = Date.now();
+    let timer = setInterval(() => {
+      let timePassed = Date.now() - start;
+      if (timePassed >= 1500) {
+        clearInterval(timer);
+        return;
+      }
+      if (!isCubeExpanded) {
+        s1.position.y += OFFSET;
+        s2.position.x -= OFFSET;
+        s3.position.x += OFFSET;
+        s4.position.z -= OFFSET;
+        s5.position.z += OFFSET;
+        // s6.position.x -= OFFSET;
+        setIsCubeExpanded(true);
+      }
+    }, 20);
+    timer();
   };
 
   return (
@@ -42,23 +44,73 @@ export const Room = ({ props }) => {
       scale-x={0.5}
       scale-y={0.5}
       scale-z={0.5}
-      // onClick={() => expandCube()}
+      onClick={() => expandCube()}
     >
-      <Side position={[0, 4, 0]} rotation={[0, 0, 0]} />
-      <Side position={[-2, 2, 0]} rotation={[0, 0, 4.7]} />
-      <Side rotation={[0, 0, 4.7]} position={[2, 2, 0]} />
-      <Side rotation={[0, 4.7, 4.7]} position={[0, 2, -2]} />
-      <Side rotation={[0, 4.7, 4.7]} position={[0, 2, 2]} />
-      <Side rotation={[0, 0, 0]} position={[0, 0, 0]} />
+      <Side
+        position={[0, 4, 0]}
+        rotation={[0, 0, 0]}
+        isCubeExpanded={isCubeExpanded}
+        setIsCubeExpanded={setIsCubeExpanded}
+      />
+      <Side
+        position={[-2, 2, 0]}
+        rotation={[0, 0, 4.7]}
+        isCubeExpanded={isCubeExpanded}
+        setIsCubeExpanded={setIsCubeExpanded}
+      />
+      <Side
+        rotation={[0, 0, 4.7]}
+        position={[2, 2, 0]}
+        isCubeExpanded={isCubeExpanded}
+        setIsCubeExpanded={setIsCubeExpanded}
+      />
+      <Side
+        rotation={[0, 4.7, 4.7]}
+        position={[0, 2, -2]}
+        isCubeExpanded={isCubeExpanded}
+        setIsCubeExpanded={setIsCubeExpanded}
+      />
+      <Side
+        rotation={[0, 4.7, 4.7]}
+        position={[0, 2, 2]}
+        isCubeExpanded={isCubeExpanded}
+        setIsCubeExpanded={setIsCubeExpanded}
+      />
+      <Side
+        rotation={[0, 0, 0]}
+        position={[0, 0, 0]}
+        isCubeExpanded={isCubeExpanded}
+        setIsCubeExpanded={setIsCubeExpanded}
+      />
     </group>
   );
 };
 
-const Side = ({ position, rotation }) => {
+const Side = ({
+  position,
+  rotation,
+  isCubeExpanded,
+  setIsCubeExpanded,
+  s1,
+}) => {
   const { gradient } = useControls({
-    gradient: { value: 0.7, min: 0, max: 1 },
+    gradient: { value: 0.4, min: 0, max: 1 },
   });
   const ref = useRef();
+  const state = useFrame((state) => {
+    // allows you to run a block of code every frame
+    const originArgs = [
+      Math.sin(state.clock.elapsedTime / 2),
+      Math.cos(state.clock.elapsedTime / 2),
+      Math.sin(state.clock.elapsedTime / 2),
+    ];
+    ref.current.layers[0].origin.set(...originArgs);
+    ref.current.layers[1].origin.set(...originArgs);
+    ref.current.layers[2].origin.set(...originArgs);
+    ref.current.layers[3].origin.set(...originArgs);
+    ref.current.layers[4].origin.set(...originArgs);
+  });
+
   return (
     <mesh
       castShadow
@@ -66,19 +118,19 @@ const Side = ({ position, rotation }) => {
       position={[position[0], position[1], position[2]]}
       rotation={[rotation[0], rotation[1], rotation[2]]}
     >
-      <LayerMaterial>
+      <LayerMaterial ref={ref}>
         <Depth
-          colorA="#ff0080"
-          colorB="black"
+          colorA="black"
+          colorB="red"
           alpha={1}
           mode="normal"
-          near={0.5 * gradient}
-          far={0.5}
+          near={1 * gradient}
+          far={1}
           origin={[0, 0, 0]}
         />
         <Depth
-          colorA="#ff0080"
-          colorB="#f7b955"
+          colorA="red"
+          colorB="orange"
           alpha={1}
           mode="add"
           near={2 * gradient}
@@ -89,27 +141,31 @@ const Side = ({ position, rotation }) => {
           colorA="#ff0080"
           colorB="green"
           alpha={1}
-          mode="multiply"
+          mode="add"
           near={3 * gradient}
           far={3}
           origin={[0, 0, 0]}
         />
         <Depth
-          colorA="white"
+          colorA="green"
           colorB="red"
+          alpha={2}
+          mode="overlay"
+          near={2 * gradient}
+          far={1}
+          origin={[0, 0, 0]}
+        />
+        <Depth
+          colorA="blue"
+          colorB="orange"
           alpha={1}
-          mode="multiply"
+          mode="add"
           near={1 * gradient}
           far={1}
           origin={[0, 0, 0]}
         />
-        <Fresnel
-          mode="add"
-          color="white"
-          intensity={0.5}
-          power={1.5}
-          bias={0.05}
-        />
+        <Fresnel mode="add" color="black" intensity={2} power={3} bias={0.1} />
+        {/* <Fresnel color={"#fe0000"} mode={"screen"} /> */}
       </LayerMaterial>
       <boxGeometry args={[4, 0.25, 4]} />
     </mesh>
