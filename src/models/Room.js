@@ -5,7 +5,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { LayerMaterial, Depth, Fresnel } from "lamina";
 import { useControls } from "leva";
 
-export const Room = ({ props }) => {
+export const Room = (props) => {
   const [isCubeExpanded, setIsCubeExpanded] = useState(false);
   const OFFSET = 0.08;
 
@@ -39,49 +39,19 @@ export const Room = ({ props }) => {
     <group
       {...props}
       dispose={null}
-      position={[0, -1, 0]}
+      // position={[0, 0, 0]}
       rotate={[0, 0, 0]}
       scale-x={0.5}
       scale-y={0.5}
       scale-z={0.5}
       onClick={() => expandCube()}
     >
-      <Side
-        position={[0, 4, 0]}
-        rotation={[0, 0, 0]}
-        isCubeExpanded={isCubeExpanded}
-        setIsCubeExpanded={setIsCubeExpanded}
-      />
-      <Side
-        position={[-2, 2, 0]}
-        rotation={[0, 0, 4.7]}
-        isCubeExpanded={isCubeExpanded}
-        setIsCubeExpanded={setIsCubeExpanded}
-      />
-      <Side
-        rotation={[0, 0, 4.7]}
-        position={[2, 2, 0]}
-        isCubeExpanded={isCubeExpanded}
-        setIsCubeExpanded={setIsCubeExpanded}
-      />
-      <Side
-        rotation={[0, 4.7, 4.7]}
-        position={[0, 2, -2]}
-        isCubeExpanded={isCubeExpanded}
-        setIsCubeExpanded={setIsCubeExpanded}
-      />
-      <Side
-        rotation={[0, 4.7, 4.7]}
-        position={[0, 2, 2]}
-        isCubeExpanded={isCubeExpanded}
-        setIsCubeExpanded={setIsCubeExpanded}
-      />
-      <Side
-        rotation={[0, 0, 0]}
-        position={[0, 0, 0]}
-        isCubeExpanded={isCubeExpanded}
-        setIsCubeExpanded={setIsCubeExpanded}
-      />
+      <Side position={[0, 4, 0]} rotation={[0, 0, 0]} />
+      <Side position={[-2, 2, 0]} rotation={[0, 0, 4.7]} />
+      <Side rotation={[0, 0, 4.7]} position={[2, 2, 0]} />
+      <Side rotation={[0, 4.7, 4.7]} position={[0, 2, -2]} />
+      <Side rotation={[0, 4.7, 4.7]} position={[0, 2, 2]} />
+      <Side rotation={[0, 0, 0]} position={[0, 0, 0]} />
     </group>
   );
 };
@@ -100,15 +70,15 @@ const Side = ({
   const state = useFrame((state) => {
     // allows you to run a block of code every frame
     const originArgs = [
-      Math.sin(state.clock.elapsedTime / 2),
       Math.cos(state.clock.elapsedTime / 2),
       Math.sin(state.clock.elapsedTime / 2),
+      Math.cos(state.clock.elapsedTime / 2),
     ];
     ref.current.layers[0].origin.set(...originArgs);
     ref.current.layers[1].origin.set(...originArgs);
     ref.current.layers[2].origin.set(...originArgs);
     ref.current.layers[3].origin.set(...originArgs);
-    ref.current.layers[4].origin.set(...originArgs);
+    // ref.current.layers[4].origin.set(...originArgs);
   });
 
   return (
@@ -120,49 +90,40 @@ const Side = ({
     >
       <LayerMaterial ref={ref}>
         <Depth
-          colorA="black"
-          colorB="red"
+          colorA="#ff0080"
+          colorB="black"
           alpha={1}
           mode="normal"
-          near={1 * gradient}
-          far={1}
-          origin={[0, 0, 0]}
-        />
-        <Depth
-          colorA="red"
-          colorB="orange"
-          alpha={1}
-          mode="add"
-          near={2 * gradient}
+          near={0.5 * gradient}
           far={0.5}
           origin={[0, 0, 0]}
         />
         <Depth
-          colorA="#ff0080"
-          colorB="green"
+          colorA="blue"
+          colorB="#f7b955"
+          alpha={1}
+          mode="add"
+          near={2 * gradient}
+          far={2}
+          origin={[0, 1, 1]}
+        />
+        <Depth
+          colorA="green"
+          colorB="#f7b955"
           alpha={1}
           mode="add"
           near={3 * gradient}
           far={3}
-          origin={[0, 0, 0]}
+          origin={[0, 1, -1]}
         />
         <Depth
-          colorA="green"
+          colorA="white"
           colorB="red"
-          alpha={2}
-          mode="overlay"
-          near={2 * gradient}
-          far={1}
-          origin={[0, 0, 0]}
-        />
-        <Depth
-          colorA="blue"
-          colorB="orange"
           alpha={1}
-          mode="add"
-          near={1 * gradient}
-          far={1}
-          origin={[0, 0, 0]}
+          mode="overlay"
+          near={1.5 * gradient}
+          far={1.5}
+          origin={[-1, -1, -1]}
         />
         <Fresnel mode="add" color="black" intensity={2} power={3} bias={0.1} />
         {/* <Fresnel color={"#fe0000"} mode={"screen"} /> */}

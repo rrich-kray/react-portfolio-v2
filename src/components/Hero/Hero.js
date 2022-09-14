@@ -47,9 +47,8 @@ const spheres = ({ ...props }) => {};
 const Scene = (props) => {
   return (
     <group {...props} dispose={null}>
-      {/* <RigidBody type="fixed"> */}
-      <Room />
-      {/* </RigidBody> */}
+      <Room position={[-2, -1, -1]} />
+      <Room position={[2, -3, 1]} />
     </group>
   );
 };
@@ -59,19 +58,16 @@ const Hero = () => {
 
   return (
     <div id="hero">
-      <div id="hero-container-left">
+      {/* <div id="hero-container-left">
         <div>
           <h1 style={{ color: "white" }}>Let's Build Something Great</h1>
-          {/* <button>
-            <a href="#about">Learn More</a>
-          </button> */}
         </div>
-      </div>
+      </div> */}
       <div id="hero-container-right">
         {/* <div className="hero-text-container">
           <h1>Let's build something great</h1>
         </div> */}
-        <Canvas ref={canvasRef} camera={{ position: [0, 2, 5] }}>
+        <Canvas ref={canvasRef} camera={{ position: [0, 2, 4] }}>
           <Suspense fallback={null}>
             {/* <color attach="background" args={["#202030"]} /> */}
             <fog attach="fog" args={["#202030", 10, 25]} />
@@ -88,7 +84,7 @@ const Hero = () => {
             >
               <orthographicCamera attach="shadow-camera" args={[0, 0, 0, 0]} />
             </directionalLight>
-            <OrbitControls autoRotate={true} />
+            <OrbitControls autoRotate={false} enableZoom={false} />
             {/* <Environment resolution={32}>
               <Lightformer position={[10, 10, 10]} scale={10} intensity={4} />
             </Environment> */}
