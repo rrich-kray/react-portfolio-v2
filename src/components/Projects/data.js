@@ -378,7 +378,7 @@ export default [
     info: {
       description:
         "This application allows users to challenge other individuals to a simple game of tic-tac-toe. It was intended to provide me a relatively easy introduction to the Next.js framework. This was also my first experience deploying the application on Vercel. If I decide to revisit the app in the future, I plan on providing users the option to play against a CPU opponent, which in all likelihood would only be a random tile selector.",
-      technologies: ["React", "HTML", "CSS", "JavaScript"],
+      technologies: ["Next", "React", "HTML", "CSS", "JavaScript"],
       gallery: [],
     },
     video:
@@ -421,14 +421,13 @@ export default [
       description:
         "Recipes utilizes the Spoonacular Recipes API to allow users to search for recipes using over 75 search criteria. All things considered, this project took much longer to get to the MVP stage than I had anticipated for a simple recipe search app, as I wanted to use it as an opportunity to gain familiarity with several new technologies, including TypeScript, Python and AWS Lambda, as well as learn a few new frontend tricks. In the future, I hope to extend this with its own server that provides user authentication capabilities, and also route those requests thorugh AWS Lambda.",
       technologies: [
-        "Next.js",
-        "React.js",
+        "Next",
+        "React",
         "HTML",
         "CSS",
         "JavaScript",
-        "Spoonacular Recipes API",
         "Axios",
-        "AWS Lambda",
+        "AWS",
         "Python",
         "FastAPI",
       ],
@@ -447,14 +446,7 @@ export default [
     info: {
       description:
         "The frontend utilizes React, and React Router DOM allows users to navigate among the pages. In its current build, this only includes login/signup pages for unauthenticated users, and a dashboard page for authenticated users. JSON web tokens are used to for authentication. Files are uploaded to a single directory within the server using the fileUpload middleware. Images and Users and kept in seperate Sequelize tables and are linked via a foreign keys.",
-      technologies: [
-        "React.js",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Axios",
-        "Express.js",
-      ],
+      technologies: ["React", "HTML", "CSS", "JavaScript", "Express", "Axios"],
       gallery: [],
     },
     video: "",
