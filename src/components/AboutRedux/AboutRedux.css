@@ -1,10 +1,9 @@
 .about-redux {
     width: 100vw;
     display: flex;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     background: var(--tertiary-clr);
 }
-
 
 .about-redux-left-panel {
     flex: 1;

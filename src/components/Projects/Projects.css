@@ -2,8 +2,9 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    margin-top: 100px;
-    margin-bottom: 100px
+    /* margin-top: 100px; */
+    padding-bottom: 50px;
+    padding-top: 50px
 }
 
 #projects-container-left {
@@ -18,13 +19,13 @@
     display: flex;
     justify-content: center;
     margin-top: 0;
-    animation-delay: 3s;
     animation: fadeIn 0.25s linear forwards;
+    animation-delay: 1.5s;
 }
 
 #projects-container-right {
     flex: 2;
-    /* opacity: 0; */
+    opacity: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* height: 100%; */
@@ -33,7 +34,7 @@
     padding-left: 100px;
     padding-right: 100px;
     animation: fadeIn 0.5s linear forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 .tile-wrapper {
