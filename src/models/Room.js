@@ -40,11 +40,10 @@ export const Room = (props) => {
       {...props}
       dispose={null}
       // position={[0, 0, 0]}
-      rotate={[0, 0, 0]}
       scale-x={0.5}
       scale-y={0.5}
       scale-z={0.5}
-      onClick={() => expandCube()}
+      // onClick={() => expandCube()}
     >
       <Side position={[0, 4, 0]} rotation={[0, 0, 0]} />
       <Side position={[-2, 2, 0]} rotation={[0, 0, 4.7]} />
@@ -67,19 +66,19 @@ const Side = ({
     gradient: { value: 0.4, min: 0, max: 1 },
   });
   const ref = useRef();
-  const state = useFrame((state) => {
-    // allows you to run a block of code every frame
-    const originArgs = [
-      Math.cos(state.clock.elapsedTime / 2),
-      Math.sin(state.clock.elapsedTime / 2),
-      Math.cos(state.clock.elapsedTime / 2),
-    ];
-    ref.current.layers[0].origin.set(...originArgs);
-    ref.current.layers[1].origin.set(...originArgs);
-    ref.current.layers[2].origin.set(...originArgs);
-    ref.current.layers[3].origin.set(...originArgs);
-    // ref.current.layers[4].origin.set(...originArgs);
-  });
+  // useFrame((state) => {
+  //   // allows you to run a block of code every frame
+  //   const originArgs = [
+  //     Math.cos(state.clock.elapsedTime / 2),
+  //     Math.sin(state.clock.elapsedTime / 2),
+  //     Math.cos(state.clock.elapsedTime / 2),
+  //   ];
+  //   ref.current.layers[0].origin.set(...originArgs);
+  //   // ref.current.layers[1].origin.set(...originArgs);
+  //   // ref.current.layers[2].origin.set(...originArgs);
+  //   // ref.current.layers[3].origin.set(...originArgs);
+  //   // ref.current.layers[4].origin.set(...originArgs);
+  // });
 
   return (
     <mesh
@@ -88,7 +87,9 @@ const Side = ({
       position={[position[0], position[1], position[2]]}
       rotation={[rotation[0], rotation[1], rotation[2]]}
     >
-      <LayerMaterial ref={ref}>
+      <boxGeometry args={[4, 0.25, 4]} />
+      <meshStandardMaterial color="red" />
+      {/* <LayerMaterial ref={ref}>
         <Depth
           colorA="#ff0080"
           colorB="black"
@@ -126,9 +127,7 @@ const Side = ({
           origin={[-1, -1, -1]}
         />
         <Fresnel mode="add" color="black" intensity={2} power={3} bias={0.1} />
-        {/* <Fresnel color={"#fe0000"} mode={"screen"} /> */}
-      </LayerMaterial>
-      <boxGeometry args={[4, 0.25, 4]} />
+      </LayerMaterial> */}
     </mesh>
   );
 };
