@@ -442,7 +442,7 @@ export default [
     ghRepository: "https://github.com/rrich-kray/recipes",
     deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/login",
     summary:
-      "Photo gallery allows users to login/signup and upload photos to their personal gallery.",
+      "Web application that allows users to login/signup and upload photos to their personal gallery.",
     info: {
       description:
         "The frontend utilizes React, and React Router DOM allows users to navigate among the pages. In its current build, this only includes login/signup pages for unauthenticated users, and a dashboard page for authenticated users. JSON web tokens are used to for authentication. Files are uploaded to a single directory within the server using the fileUpload middleware. Images and Users and kept in seperate Sequelize tables and are linked via a foreign keys.",
