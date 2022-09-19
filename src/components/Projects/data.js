@@ -391,7 +391,7 @@ export default [
     ghRepository: "https://github.com/rrich-kray/mern-blog",
     deploymentLink: "https://blog-client-rrich.herokuapp.com/",
     summary:
-      "Full stack blog website, built with React on the front end, and express/SQL/Seqeulize on the backend. Utilizes GraphQL for its API.",
+      "Full stack blog website, built with React on the front end, and express/SQL/Sequelize on the backend. Utilizes GraphQL for its API.",
     info: {
       description:
         "This project was my first real opportunity to independently build an app with a GraphQL API. While challenging, I found that I enjoy many aspects of GraphQL APIs, including its single endpoint architecture and greater querying flexibility relative to traditional REST APIs. Frontend design belongs to Ruslan Siiz on dribbble.com",
