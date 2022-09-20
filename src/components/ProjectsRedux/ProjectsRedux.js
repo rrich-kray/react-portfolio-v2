@@ -20,9 +20,21 @@ const ProjectTile = ({ project }) => {
 const ProjectInfo = ({ project, index }) => {
   return (
     <div className="project-info">
-      <span className="row-number">{index}</span>
-      <h1 style={{ color: "white", marginLeft: "30px" }}>{project.name}</h1>
-      <p style={{ color: "white", marginLeft: "30px" }}>{project.summary}</p>
+      <span className="row-number">{index + 1}</span>
+      <h1 style={{ color: "white", margin: "0 50px 15px 50px" }}>
+        {project.name}
+      </h1>
+      <p style={{ color: "white", margin: "0 50px 0 50px" }}>
+        {project.summary}
+      </p>
+      <div className="project-links">
+        <a href={project.ghRepository} style={{ marginBottom: "10px" }}>
+          GitHub Repository
+        </a>
+        {project.deploymentLink && (
+          <a href={project.deploymentLink}>Production Version</a>
+        )}
+      </div>
     </div>
   );
 };
