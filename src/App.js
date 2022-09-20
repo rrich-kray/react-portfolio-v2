@@ -9,6 +9,7 @@ import Contact from "./components/Contact/Contact";
 import Splash from "./components/Splash/Splash";
 import AboutRedux from "./components/AboutRedux/AboutRedux";
 import ProjectPage from "./components/ProjectPage/ProjectPage";
+import ProjectsRedux from "./components/ProjectsRedux/ProjectsRedux";
 
 function App() {
   // Clicking on tile will set isPostActive to true, and also set activePost to the content of that post
@@ -38,7 +39,8 @@ function App() {
               <>
                 {/* <Nav /> */}
                 {/* <Hero /> */}
-                <Projects setActivePost={setActivePost} />
+                {/* <Projects setActivePost={setActivePost} /> */}
+                <ProjectsRedux />
                 <AboutRedux />
                 {/* <About /> */}
                 {/* <Skills /> */}
