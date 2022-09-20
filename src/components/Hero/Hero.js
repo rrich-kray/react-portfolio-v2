@@ -24,21 +24,14 @@ import {
   BakeShadows,
   RandomizedLight,
   AccumulativeShadows,
+  useBoxProjectedEnv,
   useGLTF,
 } from "@react-three/drei";
-import {
-  Physics,
-  RigidBody,
-  CuboidCollider,
-  InstancedRigidBodies,
-} from "@react-three/rapier";
-import { UnrealBloomPass } from "three-stdlib";
+import { Physics, usePlane, useBox, useSphere } from "@react-three/cannon";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
 import { Room } from "../../models/Room";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-
-extend({ UnrealBloomPass });
 
 // <Canvas> sets up the scene and camera, and renders the scene every frames, eliminating the need for a traditional render loop
 // <mesh> is equivalent the THREE.mesh(). Mesh is a basic scene object
@@ -53,15 +46,36 @@ extend({ UnrealBloomPass });
 // Simple house
 // Snow globe
 
-const Laptop = (props) => {
-  const fbx = useLoader(FBXLoader, "/completeLaptop.fbx");
-  return <primitive object={fbx} />;
+const Sphere = (props) => {
+  const [ref, api] = useSphere(() => ({
+    mass: 5,
+    position: [0, 5, 0],
+    ...props,
+  }));
+  return (
+    <mesh ref={ref} onClick={() => api.velocity.set(0, 4, 0)}>
+      <sphereGeometry />
+    </mesh>
+  );
+};
+
+const Plane = (props) => {
+  const [ref, api] = usePlane(() => ({
+    rotation: [-Math.PI / 2, 0, 0],
+    ...props,
+  }));
+  return (
+    <mesh ref={ref}>
+      <planeGeometry args={[10, 10]} />
+      <meshBasicMaterial color="blue" />
+    </mesh>
+  );
 };
 
 const Scene = (props) => {
   return (
     <group {...props} dispose={null}>
-      <Room position={[0, 0, -1]} />
+      <Room position={[0, 0, 0]} />
     </group>
   );
 };
@@ -84,10 +98,10 @@ const Hero = () => {
           <Suspense fallback={null}>
             {/* <color attach="background" args={["#202030"]} /> */}
             {/* <Scene position={[0, 0, 0]} rotate={[0, 0, 0]}></Scene> */}
-            <mesh castShadow position={[0, -1, 0]}>
-              <sphereGeometry args={[0.5, 70, 70]} />
-            </mesh>
-            <Laptop />
+            <Physics>
+              <Plane />
+              <Sphere />
+            </Physics>
             <AccumulativeShadows
               temporal
               frames={100}
