@@ -419,7 +419,7 @@ export default [
       "Next.js application that allows users to search for recipes using over 75 search criteria.",
     info: {
       description:
-        "Recipes utilizes the Spoonacular Recipes API to allow users to search for recipes using over 75 search criteria. All things considered, this project took much longer to get to the MVP stage than I had anticipated for a simple recipe search app, as I wanted to use it as an opportunity to gain familiarity with several new technologies, including TypeScript, Python and AWS Lambda, as well as learn a few new frontend tricks. In the future, I hope to extend this with its own server that provides user authentication capabilities, and also route those requests thorugh AWS Lambda.",
+        "Recipes utilizes the Spoonacular Recipes API to allow users to search for recipes using over 75 search criteria. All things considered, this project took much longer to get to the MVP stage than I had anticipated for a simple recipe search app, as I wanted to use it as an opportunity to gain familiarity with several new technologies, including TypeScript, Python and AWS Lambda, as well as learn a few new frontend tricks. In the future, I hope to extend this with its own server that provides user authentication capabilities so that users can create their own accounts.",
       technologies: [
         "Next",
         "React",
