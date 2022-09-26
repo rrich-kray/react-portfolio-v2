@@ -440,10 +440,10 @@ export default [
   {
     id: 27,
     name: "Photo Gallery",
-    ghRepository: "https://github.com/rrich-kray/recipes",
-    deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/login",
+    ghRepository: "https://github.com/rrich-kray/photo-gallery-client",
+    deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/",
     summary:
-      "Photo gallery allows users to login/signup and upload photos to their own personal gallery.",
+      "Photo gallery allows users to login/signup and upload photos to a personal gallery.",
     info: {
       description:
         "The frontend utilizes React, and React Router DOM allows users to navigate among the pages. In its current build, this only includes login/signup pages for unauthenticated users, and a dashboard page for authenticated users. JSON web tokens are used to for authentication. Files are uploaded to a single directory within the server using the fileUpload middleware. Images and Users and kept in seperate Sequelize tables and are linked via a foreign keys.",
@@ -460,16 +460,4 @@ export default [
     video: "",
     backgroundImage: photoGallery,
   },
-  // {
-  //   id: 24,
-  //   name: "Photo Gallery",
-  //   ghRepository: "https://github.com/rrich-kray/react-portfolio-v2",
-  //   deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/",
-  //   summary:
-  //     "Full stack application that allows users to log in and upload images to their personal gallery. Utilizes React, HTML/CSS/JS, SQL, Sequelize, Express",
-  // info:  {},
-  // video: "",
-  //   backgroundImage:
-  //     "https://previews.dropbox.com/p/thumb/ABnDTUimPYDOBJX265mEi62bAnhkxSBcKwAK_gqoqx-R30LOPlYSCc8qas-LsrzPwOlCUG-WVOZgVO89OWJnwh--WydpS4AE2lFxwBSZTAbZpdnWW7Y6p1xAPAbOx9v5SCmshKSmxj_r44qZyCRrgZtdnBPvtE3X7KHP9h-SeWrwkriT_3m_aXWWTMbIBXFedPC-B-HoBSd12sH5K0DPpgsVEL1ClrfhUyGpe9Snzq9K8tYaUZPGhb1xxyUx6ywFf1kIUBJ9ZAIEkCGMdh_F_lbh-XKEyyqgoPOlS2RcbQ1mupJz0buurzF-yrxVJEk7zvezctKz49Or4R4_f-s9tQwI8A_gQ1Uc8K_py51ADDxXIt2OV-IBs6OBIGP5XYKojFg/p.png",
-  // },
 ];

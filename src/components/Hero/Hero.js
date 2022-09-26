@@ -14,11 +14,21 @@ import {
   softShadows,
   MeshWobbleMaterial,
 } from "@react-three/drei";
-import { Physics, usePlane, useBox, useSphere } from "@react-three/cannon";
+import { usePlane, useBox, useSphere } from "@react-three/cannon";
+import {
+  RigidBody,
+  Physics,
+  InstancedRigidBodies,
+  CuboidCollider,
+  BallCollider,
+  MeshCollider,
+} from "@react-three/rapier";
+import { Box, Torus } from "@react-three/drei";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
 import { Room } from "../../models/Room";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+import { InstancedMesh } from "three";
 
 // <Canvas> sets up the scene and camera, and renders the scene every frames, eliminating the need for a traditional render loop
 // <mesh> is equivalent the THREE.mesh(). Mesh is a basic scene object
@@ -36,15 +46,23 @@ import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 
 softShadows();
 
-const InstancedSpheres = ({ position, color, speed, args, mass, count }) => {
-  const [ref, api] = useSphere(() => ({
-    mass: mass,
-    position: [0, 0, 0],
-  }));
+// const Sphere = ({ position, color, speed, args, mass, count }) => {
+//   const [ref, api] = useSphere(() => ({
+//     mass: mass,
+//     position: [0, 0, 0],
+//   }));
+//   return (
+//     <mesh ref={ref} position={[...position]}>
+//       <sphereGeometry />
+//       <MeshWobbleMaterial color={color} />
+//     </mesh>
+//   );
+// };
+
+const Sphere = ({ position, color, speed }) => {
   return (
-    <mesh ref={ref} position={[...position]}>
-      <sphereGeometry />
-      <MeshWobbleMaterial color={color} />
+    <mesh position={[...position]}>
+      <sphereGeometry args={[1, 64, 64]} />
     </mesh>
   );
 };
@@ -66,8 +84,45 @@ const Plane = (props) => {
 const Scene = (props) => {
   return (
     <group {...props} dispose={null}>
-      <Room position={[4, 10, 10]} color="pink" />
+      <RigidBody>
+        <Sphere position={[0, -10, 0]} mass={5} />
+      </RigidBody>
     </group>
+  );
+};
+
+const InstancedSpheres = () => {
+  const SPHERE_COUNT = 1000;
+  const positions = Array.from({ length: SPHERE_COUNT }, (_, index) => [
+    index,
+    Math.random(),
+    Math.random(),
+  ]);
+  const rotations = Array.from({ length: SPHERE_COUNT }, (_, index) => [
+    Math.random(),
+    Math.random(),
+    Math.random(),
+  ]);
+  const scales = Array.from({ length: SPHERE_COUNT }, (_, index) => [
+    Math.random(),
+    Math.random(),
+    Math.random(),
+  ]);
+
+  return (
+    <InstancedRigidBodies
+      positions={positions}
+      // rotations={rotations}
+      // scales={scales}
+      colliders="ball"
+    >
+      <instancedMesh args={[undefined, undefined, SPHERE_COUNT]}>
+        <sphereGeometry args={[1, 64, 64]} />
+        <meshBasicMaterial color="blue">
+          <CuboidCollider args={[0.1, 0.2, 0.1]}></CuboidCollider>
+        </meshBasicMaterial>
+      </instancedMesh>
+    </InstancedRigidBodies>
   );
 };
 
@@ -85,13 +140,21 @@ const Hero = () => {
         {/* <div className="hero-text-container">
           <h1>Let's build something great</h1>
         </div> */}
-        <Canvas ref={canvasRef} camera={{ position: [0, 2, 4], fov: 100 }}>
+        <Canvas ref={canvasRef} camera={{ position: [-30, 35, -15], fov: 12 }}>
           <Suspense fallback={null}>
             {/* <color attach="background" args={["#202030"]} /> */}
             {/* <Scene position={[0, 0, 0]} rotate={[0, 0, 0]}></Scene> */}
-            <Physics gravity={[0, -25, 0]}>
-              <Plane />
-              <InstancedSpheres position={[0, 25, 0]} mass={5} count={10} />
+            <Physics gravity={[0, -5, 0]} colliders="ball">
+              <InstancedSpheres></InstancedSpheres>
+              <RigidBody position={[0, -1, 0]} type="fixed" colliders="false">
+                <CuboidCollider restitution={0.1} args={[1000, 1, 1000]} />
+              </RigidBody>
+            </Physics>
+            <Physics gravity={[0, 5, 0]}>
+              <InstancedSpheres></InstancedSpheres>
+              <RigidBody position={[0, -1, 0]} type="fixed" colliders="false">
+                <CuboidCollider restitution={0.1} args={[1000, 1, 1000]} />
+              </RigidBody>
             </Physics>
             <AccumulativeShadows
               temporal
