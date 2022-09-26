@@ -439,7 +439,7 @@ export default [
   {
     id: 27,
     name: "Photo Gallery",
-    ghRepository: "https://github.com/rrich-kray/recipes",
+    ghRepository: "https://github.com/rrich-kray/photo-gallery-client",
     deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/login",
     summary:
       "Web application that allows users to login/signup and upload photos to their personal gallery.",
