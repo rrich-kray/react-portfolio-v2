@@ -3,16 +3,6 @@ import ticTacToe from "../../assets/images/tic-tac-toe.png";
 import mernBlog from "../../assets/images/mern-blog.png";
 import recipes from "../../assets/images/recipes.png";
 import photoGallery from "../../assets/images/photo-gallery.png";
-// import ticTacToeVid from "./videos/tictactoe.webm";
-// import kanbanVid from "./videos/kanban.webm";
-// import codingQuizVid from "./videos/coding-quiz.webm";
-// import commentsSectionVid from "./videos/comments-section.webm";
-// import dropdownVid from "./videos/dropdown.webm";
-// import ghUserSearchVid from "./videos/gh-user-search.webm";
-// import reactLandingPageVid from "./videos/react-landing-page.webm";
-// import passGenVid from "./videos/pass-gen.webm";
-// import adviceGenVid from "./videos/advice-gen.webm";
-// import weatherDashVid from "./videos/weather-dash.webm";
 
 export default [
   {
@@ -151,7 +141,7 @@ export default [
     name: "Ecommerce Backend",
     ghRepository: "https://github.com/rrich-kray/ecommerce-product-database",
     deploymentLink: "",
-    summary: "Database for a hypothetical ecommerce website.",
+    summary: "Database for a mock ecommerce website.",
     info: {
       description: "",
       technologies: ["Node", "JavaScript", "Express"],

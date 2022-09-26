@@ -15,7 +15,7 @@ const Tile = ({ projectData, setActivePost }) => {
       onClick={() => setActivePost(projectData)}
     >
       <div className="tile-overlay">
-        <h1>{projectData.name}</h1>
+        <h1 style={{ textAlign: "center" }}>{projectData.name}</h1>
         <p>{projectData.summary}</p>
         {/* <a href={projectData.ghRepository}>GitHub</a>
         {projectData.deploymentLink && (
