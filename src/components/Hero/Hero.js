@@ -8,24 +8,11 @@ import {
   useLoader,
 } from "@react-three/fiber";
 import {
-  Environment,
-  Icosahedron,
   OrbitControls,
-  TransformControls,
-  Preload,
-  ScrollControls,
-  Scroll,
-  useScroll,
-  Image,
-  useFBO,
-  PerspectiveCamera,
-  Lightformer,
-  Effects,
-  BakeShadows,
   RandomizedLight,
   AccumulativeShadows,
-  useBoxProjectedEnv,
-  useGLTF,
+  softShadows,
+  MeshWobbleMaterial,
 } from "@react-three/drei";
 import { Physics, usePlane, useBox, useSphere } from "@react-three/cannon";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
@@ -40,34 +27,38 @@ import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 // Directional light: A light that is emitted in a specific direction
 // Environment: This texture is set as the environment map for all physical materials in a scene
 // mesh components have 13 onclick events
+// Drei allows you to import effects rather than having to write them
 
 // Ideas for hero three.js model;
 // Room
 // Simple house
 // Snow globe
 
-const Sphere = (props) => {
+softShadows();
+
+const InstancedSpheres = ({ position, color, speed, args, mass, count }) => {
   const [ref, api] = useSphere(() => ({
-    mass: 5,
-    position: [0, 5, 0],
-    ...props,
+    mass: mass,
+    position: [0, 0, 0],
   }));
   return (
-    <mesh ref={ref} onClick={() => api.velocity.set(0, 4, 0)}>
+    <mesh ref={ref} position={[...position]}>
       <sphereGeometry />
+      <MeshWobbleMaterial color={color} />
     </mesh>
   );
 };
 
 const Plane = (props) => {
+  const { viewport } = useThree();
   const [ref, api] = usePlane(() => ({
     rotation: [-Math.PI / 2, 0, 0],
     ...props,
   }));
   return (
-    <mesh ref={ref}>
-      <planeGeometry args={[10, 10]} />
-      <meshBasicMaterial color="blue" />
+    <mesh ref={ref} position={[0, -viewport.height / 2, 0]}>
+      <planeGeometry args={[5, 5]} />
+      <meshBasicMaterial />
     </mesh>
   );
 };
@@ -75,7 +66,7 @@ const Plane = (props) => {
 const Scene = (props) => {
   return (
     <group {...props} dispose={null}>
-      <Room position={[0, 0, 0]} />
+      <Room position={[4, 10, 10]} color="pink" />
     </group>
   );
 };
@@ -98,9 +89,9 @@ const Hero = () => {
           <Suspense fallback={null}>
             {/* <color attach="background" args={["#202030"]} /> */}
             {/* <Scene position={[0, 0, 0]} rotate={[0, 0, 0]}></Scene> */}
-            <Physics>
+            <Physics gravity={[0, -25, 0]}>
               <Plane />
-              <Sphere />
+              <InstancedSpheres position={[0, 25, 0]} mass={5} count={10} />
             </Physics>
             <AccumulativeShadows
               temporal
@@ -122,7 +113,7 @@ const Hero = () => {
               />
             </AccumulativeShadows>
             <ambientLight args={[0xff0000]} intensity={0.1} />
-            <directionalLight
+            {/* <directionalLight
               castShadow
               shadow-mapSize={[1024, 1024]}
               color="red"
@@ -130,7 +121,7 @@ const Hero = () => {
               position={[0, -5, 5]}
             >
               <orthographicCamera attach="shadow-camera" args={[0, 0, 0, 0]} />
-            </directionalLight>
+            </directionalLight> */}
             <OrbitControls autoRotate={false} enableZoom={false} />
             {/* <Environment resolution={32}>
               <Lightformer position={[10, 10, 10]} scale={10} intensity={4} />
