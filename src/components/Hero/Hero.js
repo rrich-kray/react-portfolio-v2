@@ -22,13 +22,17 @@ import {
   CuboidCollider,
   BallCollider,
   MeshCollider,
+  Debug,
 } from "@react-three/rapier";
+import { UnrealBloomPass } from "three-stdlib";
 import { Box, Torus } from "@react-three/drei";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
 import { Room } from "../../models/Room";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { InstancedMesh } from "three";
+
+extend({ UnrealBloomPass });
 
 // <Canvas> sets up the scene and camera, and renders the scene every frames, eliminating the need for a traditional render loop
 // <mesh> is equivalent the THREE.mesh(). Mesh is a basic scene object
@@ -59,38 +63,6 @@ softShadows();
 //   );
 // };
 
-const Sphere = ({ position, color, speed }) => {
-  return (
-    <mesh position={[...position]}>
-      <sphereGeometry args={[1, 64, 64]} />
-    </mesh>
-  );
-};
-
-const Plane = (props) => {
-  const { viewport } = useThree();
-  const [ref, api] = usePlane(() => ({
-    rotation: [-Math.PI / 2, 0, 0],
-    ...props,
-  }));
-  return (
-    <mesh ref={ref} position={[0, -viewport.height / 2, 0]}>
-      <planeGeometry args={[5, 5]} />
-      <meshBasicMaterial />
-    </mesh>
-  );
-};
-
-const Scene = (props) => {
-  return (
-    <group {...props} dispose={null}>
-      <RigidBody>
-        <Sphere position={[0, -10, 0]} mass={5} />
-      </RigidBody>
-    </group>
-  );
-};
-
 const InstancedSpheres = () => {
   const SPHERE_COUNT = 1000;
   const positions = Array.from({ length: SPHERE_COUNT }, (_, index) => [
@@ -118,7 +90,7 @@ const InstancedSpheres = () => {
     >
       <instancedMesh args={[undefined, undefined, SPHERE_COUNT]}>
         <sphereGeometry args={[1, 64, 64]} />
-        <meshBasicMaterial color="blue">
+        <meshBasicMaterial color="white">
           <CuboidCollider args={[0.1, 0.2, 0.1]}></CuboidCollider>
         </meshBasicMaterial>
       </instancedMesh>
@@ -140,19 +112,25 @@ const Hero = () => {
         {/* <div className="hero-text-container">
           <h1>Let's build something great</h1>
         </div> */}
-        <Canvas ref={canvasRef} camera={{ position: [-30, 35, -15], fov: 12 }}>
+        <Canvas ref={canvasRef} camera={{ position: [-30, 0, -15], fov: 12 }}>
           <Suspense fallback={null}>
             {/* <color attach="background" args={["#202030"]} /> */}
             {/* <Scene position={[0, 0, 0]} rotate={[0, 0, 0]}></Scene> */}
-            <Physics gravity={[0, -5, 0]} colliders="ball">
+            <Physics gravity={[0, 5, 0]} colliders="ball">
+              <Debug color="red" sleepColor="blue" />
               <InstancedSpheres></InstancedSpheres>
-              <RigidBody position={[0, -1, 0]} type="fixed" colliders="false">
+              <RigidBody
+                position={[0, 5, 0]}
+                rotation={[0, 0, 0]}
+                type="fixed"
+                colliders="false"
+              >
                 <CuboidCollider restitution={0.1} args={[1000, 1, 1000]} />
               </RigidBody>
             </Physics>
-            <Physics gravity={[0, 5, 0]}>
+            <Physics gravity={[0, -5, 0]}>
               <InstancedSpheres></InstancedSpheres>
-              <RigidBody position={[0, -1, 0]} type="fixed" colliders="false">
+              <RigidBody position={[0, -5, 0]} type="fixed" colliders="false">
                 <CuboidCollider restitution={0.1} args={[1000, 1, 1000]} />
               </RigidBody>
             </Physics>
@@ -176,7 +154,7 @@ const Hero = () => {
               />
             </AccumulativeShadows>
             <ambientLight args={[0xff0000]} intensity={0.1} />
-            {/* <directionalLight
+            <directionalLight
               castShadow
               shadow-mapSize={[1024, 1024]}
               color="red"
@@ -184,8 +162,8 @@ const Hero = () => {
               position={[0, -5, 5]}
             >
               <orthographicCamera attach="shadow-camera" args={[0, 0, 0, 0]} />
-            </directionalLight> */}
-            <OrbitControls autoRotate={false} enableZoom={false} />
+            </directionalLight>
+            <OrbitControls autoRotate={false} enableZoom={true} />
             {/* <Environment resolution={32}>
               <Lightformer position={[10, 10, 10]} scale={10} intensity={4} />
             </Environment> */}
