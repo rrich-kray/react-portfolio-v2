@@ -13,11 +13,11 @@ import {
   AccumulativeShadows,
   softShadows,
   MeshWobbleMaterial,
+  Reflector,
 } from "@react-three/drei";
-import { usePlane, useBox, useSphere } from "@react-three/cannon";
+import { usePlane, useBox, useSphere, Physics } from "@react-three/cannon";
 import {
   RigidBody,
-  Physics,
   InstancedRigidBodies,
   CuboidCollider,
   BallCollider,
@@ -25,7 +25,7 @@ import {
   Debug,
 } from "@react-three/rapier";
 import { UnrealBloomPass } from "three-stdlib";
-import { Box, Torus } from "@react-three/drei";
+import { Torus } from "@react-three/drei";
 import { EffectComposer, DepthOfField } from "@react-three/postprocessing";
 import { Room } from "../../models/Room";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -47,28 +47,28 @@ extend({ UnrealBloomPass });
 // Room
 // Simple house
 // Snow globe
+// Glowing spheres floating upward. Multicolored.
+// Glowing spheres placed in a specific pattern.
 
 softShadows();
 
-// const Sphere = ({ position, color, speed, args, mass, count }) => {
-//   const [ref, api] = useSphere(() => ({
-//     mass: mass,
-//     position: [0, 0, 0],
-//   }));
-//   return (
-//     <mesh ref={ref} position={[...position]}>
-//       <sphereGeometry />
-//       <MeshWobbleMaterial color={color} />
-//     </mesh>
-//   );
-// };
+const Sphere = ({ position, color, speed, args, mass, count }) => {
+  const [ref, api] = useSphere(() => ({
+    mass: mass,
+    position: [0, 0, 0],
+  }));
+  return (
+    <mesh ref={ref} position={[...position]}>
+      <sphereGeometry />
+      <MeshWobbleMaterial color={color} />
+    </mesh>
+  );
+};
 
 const InstancedSpheres = () => {
-  const SPHERE_COUNT = 1000;
+  const SPHERE_COUNT = 100;
   const positions = Array.from({ length: SPHERE_COUNT }, (_, index) => [
-    index,
-    Math.random(),
-    Math.random(),
+    0, 13, 0,
   ]);
   const rotations = Array.from({ length: SPHERE_COUNT }, (_, index) => [
     Math.random(),
@@ -98,6 +98,55 @@ const InstancedSpheres = () => {
   );
 };
 
+const Box = ({ dimensions, ...props }) => {
+  const [ref, api] = useBox(() => ({ mass: 5, ...props }));
+  return (
+    <mesh castShadow receiveShadow {...props}>
+      <boxGeometry args={[...dimensions]} />
+      <meshBasicMaterial color="yellow" />
+    </mesh>
+  );
+};
+
+const Cylinder = ({ dimensions, ...props }) => {
+  return (
+    <mesh castShadow receiveShadow {...props}>
+      <cylinderGeometry args={[...dimensions]} />
+      <meshStandardMaterial color="white" />
+    </mesh>
+  );
+};
+
+const Obstacles = (props) => {
+  return (
+    <RigidBody type="fixed">
+      <Box
+        dimensions={[25, 0.5, 5]}
+        position={[-10, 4, 1]}
+        rotation={[0, 5, 4]}
+      />
+      <Box dimensions={[25, 0.5, 5]} position={[2, -4, 5]} />
+      <Cylinder dimensions={[0.25, 0.25, 4]} />
+      <Cylinder dimensions={[0.25, 0.25, 4]} />
+      <Cylinder dimensions={[0.25, 0.25, 4]} />
+      <Cylinder dimensions={[0.25, 0.25, 4]} />
+    </RigidBody>
+  );
+};
+
+const Plane = (props) => {
+  const [ref, api] = usePlane(() => ({
+    rotation: [-Math.PI / 2, 0, 0],
+    ...props,
+  }));
+  return (
+    <mesh receiveShadow ref={ref}>
+      <planeGeometry args={[1000, 1000]} />
+      <meshStandardMaterial color="#f0f0f0" />
+    </mesh>
+  );
+};
+
 const Hero = () => {
   const canvasRef = useRef();
 
@@ -112,65 +161,24 @@ const Hero = () => {
         {/* <div className="hero-text-container">
           <h1>Let's build something great</h1>
         </div> */}
-        <Canvas ref={canvasRef} camera={{ position: [-30, 0, -15], fov: 12 }}>
+        <Canvas
+          ref={canvasRef}
+          dpr={[1, 2]}
+          camera={{ position: [-5, 5, 5], fov: 50 }}
+        >
           <Suspense fallback={null}>
-            {/* <color attach="background" args={["#202030"]} /> */}
-            {/* <Scene position={[0, 0, 0]} rotate={[0, 0, 0]}></Scene> */}
-            <Physics gravity={[0, 5, 0]} colliders="ball">
-              <Debug color="red" sleepColor="blue" />
-              <InstancedSpheres></InstancedSpheres>
-              <RigidBody
-                position={[0, 5, 0]}
-                rotation={[0, 0, 0]}
-                type="fixed"
-                colliders="false"
-              >
-                <CuboidCollider restitution={0.1} args={[1000, 1, 1000]} />
-              </RigidBody>
+            <Physics>
+              <Plane />
+              <Box dimensions={[4, 4, 4]} position={[0, 0, 0]} />
             </Physics>
-            <Physics gravity={[0, -5, 0]}>
-              <InstancedSpheres></InstancedSpheres>
-              <RigidBody position={[0, -5, 0]} type="fixed" colliders="false">
-                <CuboidCollider restitution={0.1} args={[1000, 1, 1000]} />
-              </RigidBody>
-            </Physics>
-            <AccumulativeShadows
-              temporal
-              frames={100}
-              color="black"
-              colorblend={5}
-              toneMapped={true}
-              alphaTest={1}
-              opacity={0.5}
-              scale={10}
-              position={[0, 0, 0]}
-            >
-              <RandomizedLight
-                amount={10}
-                radius={4}
-                ambient={0.5}
-                intensity={1}
-                position={[1, 1, 1]}
-              />
-            </AccumulativeShadows>
-            <ambientLight args={[0xff0000]} intensity={0.1} />
-            <directionalLight
+            <ambientLight />
+            <spotLight
+              angle={0.25}
+              penumbra={1}
+              position={[10, 10, 5]}
               castShadow
-              shadow-mapSize={[1024, 1024]}
-              color="red"
-              instensity={0.5}
-              position={[0, -5, 5]}
-            >
-              <orthographicCamera attach="shadow-camera" args={[0, 0, 0, 0]} />
-            </directionalLight>
+            />
             <OrbitControls autoRotate={false} enableZoom={true} />
-            {/* <Environment resolution={32}>
-              <Lightformer position={[10, 10, 10]} scale={10} intensity={4} />
-            </Environment> */}
-            {/* <Effects>
-              <unrealBloomPass strength={0.1} radius={0.5} />
-            </Effects> */}
-            {/* <TransformControls /> */}
           </Suspense>
         </Canvas>
       </div>
