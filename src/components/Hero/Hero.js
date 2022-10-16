@@ -172,7 +172,11 @@ const Hero = () => {
             />
             <Earth />
           </Suspense>
-          <OrbitControls autoRotate={false} enableZoom={false} />
+          <OrbitControls
+            autoRotate={false}
+            enableZoom={false}
+            enableRotate={false}
+          />
         </Canvas>
 
         {/* <AnimationCanvas /> */}
