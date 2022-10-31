@@ -48,7 +48,7 @@ const AboutRedux = () => {
   ];
 
   return (
-    <div className="about-redux">
+    <div id="about-redux">
       <div className="about-redux-left-panel">
         <h1>About</h1>
       </div>

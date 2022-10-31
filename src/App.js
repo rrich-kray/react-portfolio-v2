@@ -46,26 +46,30 @@ function App() {
 
   return (
     <>
-      {isLoading ? (
+      {/* {isLoading ? (
         <Splash />
-      ) : (
-        <div className="wrapper">
-          <div id="app">
-            <ThreeNav
-              activePage={activePage}
-              changeActivePage={changeActivePage}
+      ) : ( */}
+      <div className="wrapper">
+        <div id="app">
+          <ThreeNav
+            activePage={activePage}
+            changeActivePage={changeActivePage}
+          />
+          {activePost.length !== 0 ? (
+            <ProjectPage
+              projectData={activePost}
+              setActivePost={setActivePost}
             />
-            {activePost.length !== 0 ? (
-              <ProjectPage
-                projectData={activePost}
-                setActivePost={setActivePost}
-              />
-            ) : (
-              renderPage()
-            )}
-          </div>
+          ) : (
+            <>
+              <Hero />
+              <Projects />
+              <AboutRedux />
+            </>
+          )}
         </div>
-      )}
+      </div>
+      {/* )} */}
     </>
   );
 }
