@@ -1,35 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 #hero {
     height: 100vh;
     width: 100vw;
-    display: flex
+    display: flex;
+    background: black
 }
 
 #hero-container-left {
-    flex: 1;
+    flex: 0.5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#hero-container-left h1 {
-    font-size: 3rem
 }
 
 #hero-container-left :nth-child(1) {
     display: flex;
-    flex-direction: column;
+    opacity: 0;
+    padding: 50px;
+    /* flex-direction: column; */
     justify-content: center;
-    align-items: center
+    align-items: flex-start;
+    /* animation: fadeIn 1s linear forwards;
+    animation-delay: 2s */
 }
 
+@keyframes fadeIn {
+    0% {
+        transform: translateY(15%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+#hero-container-left h1 {
+    font-size: 4rem;
+    /* font-family: 'Sriracha', cursive; */
+}
 
 #hero-container-right {
     flex: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
     display: flex;
-    flex-direction: center;
     align-items: center;
     justify-content: center;
+    /* animation: fadeIn 0.5s linear forwards;
+    animation-delay: 2s; */
+}
+
+.hero-cta-container {
+    height: 250px;
+    padding: 50px;
+    background: rgba(100, 100, 100, 0.25);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+    z-index: 998;
+}
+
+.hero-cta-container a {
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: black;
+    transition: 0.25s linear;
+    cursor: pointer
+}
+
+.hero-cta-container a:hover {
+    background: white;
+    color: black
+}
+
+.hero-cto-container button {
+    margin-top: 20px;
+    background: none;
+    /* border: none; */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    color: white
+}
+
+#hero-container-right h1 {
+    background: linear-gradient(30deg, #c850c0, #ffcc70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    font-weight: 1000;
+    letter-spacing: -0.025em;
+    text-align: center
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-10%)
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.hero-text-container {
+    position: absolute
 }
 
 #hero-container-left button {
@@ -47,96 +140,7 @@
     font-weight: bold
 }
 
-/*
-===============
-Animation
-===============
-*/
-
-.loader {
-    position: relative;
-    transform: skewY(-15deg) translateX(50px) translateY(50px);
-    animation: animateColor 2.5s linear infinite;
-    margin-right: 75px;
-}
-
-@keyframes animateColor {
-    0% {
-        filter: hue-rotate(0deg)
-    }
-    100% {
-        filter: hue-rotate(360deg)
-    }
-}
-
-/* .loader::before {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    background: #f00;
-    transform-origin: bottom;
-    top: 300px;
-    transform: skew(45deg);
-    filter: blur(20px)
-} */
-
-.loader span {
-    position: relative;
-    width: 200px;
-    height: 40px;
-    display: block;
-    background: #3e3f46;
-    transition: 0.5s;
-    z-index: var(--i);
-    animation: animate 5s ease-in-out infinite;
-    animation-delay: calc(-1s * var(--i))
-}
-
-@keyframes animate {
-    0%,100% {
-        transform: translateX(-70px)
-    }
-    50% {
-        transform: translateY(70px)
-    }
-}
-
-.loader span:hover {
-    background: #33a3ee;
-    transition: 0s
-}
-
-.loader span::before {
-    content: '';
-    position: absolute;
-    background: #2e3133;
-    top: 0;
-    left: -150px;
+.threejs-canvas {
     height: 100%;
-    width: 150px;
-    transform-origin: right;
-    transform: skewY(45deg);
-    transition: 0.5s
-}
-
-.loader span:hover::before {
-    background: #1f5378;
-    transition: 0s;
-}
-
-.loader span::after {
-    content: '';
-    position: absolute;
-    top: -150px;
     width: 100%;
-    height: 150px;
-    background: #f00;
-    transform-origin: bottom;
-    transform: skew(45deg);
-    background: #35383e;
-}
-
-.loader span:hover::after {
-    background: #2982b9
 }

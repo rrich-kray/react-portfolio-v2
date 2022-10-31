@@ -3,6 +3,22 @@ import ticTacToe from "../../assets/images/tic-tac-toe.png";
 import mernBlog from "../../assets/images/mern-blog.png";
 import recipes from "../../assets/images/recipes.png";
 import photoGallery from "../../assets/images/photo-gallery.png";
+import advice_gen from "./images/advice_gen.png";
+import chart_fs from "./images/chart_fs.png";
+import chart from "./images/chart.png";
+import coding_quiz_pro from "./images/coding_quiz_pro.png";
+import comments_section from "./images/comments_section.png";
+import dropdown from "./images/dropdown.png";
+import ecommerce_backend from "./images/ecommerce_backend.png";
+import employee_tracker from "./images/employee_tracker.png";
+import gh_user_api from "./images/gh-user-api.png";
+import kanban_pwa from "./images/kanban_pwa.png";
+import kanban from "./images/kanban.png";
+import pw_gen from "./images/pw_gen.png";
+import react_landing_page from "./images/react_landing_page.png";
+import readme_gen from "./images/readme_gen.png";
+import team_profile_gen from "./images/team_profile_gen.png";
+import weather_dash from "./images/weather_dash.png";
 
 export default [
   {
@@ -18,8 +34,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/employee-tracker/main/assets/images/screen2.png",
+    backgroundImage: employee_tracker,
   },
   {
     id: 2,
@@ -35,8 +50,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/team-profile-generator/main/assets/images/screen1.png",
+    backgroundImage: team_profile_gen,
   },
   {
     id: 3,
@@ -55,8 +69,7 @@ export default [
     },
     video:
       "https://drive.google.com/file/d/13U4nIFZXdIHBzKV-3xD_gXuo5GVhZNj9/preview",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/weather-dashboard/main/assets/images/screen1.png",
+    backgroundImage: weather_dash,
   },
   {
     id: 4,
@@ -72,8 +85,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/professional-readme-generator/main/assets/images/screen1.png",
+    backgroundImage: readme_gen,
   },
   // {
   //   id: 5,
@@ -110,8 +122,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/password-generator/main/Develop/assets/images/RPG.png",
+    backgroundImage: pw_gen,
   },
   // {
   //   id: 8,
@@ -148,8 +159,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/ecommerce-product-database/master/assets/images/screen1.png",
+    backgroundImage: ecommerce_backend,
   },
   // {
   //   id: 11,
@@ -187,8 +197,7 @@ export default [
     },
     video:
       "https://drive.google.com/file/d/1PP798s9YQQ7SqsxkoaoQShb4Da_uZGPR/preview",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/advice-generator/main/src/images/advice-gen.png",
+    backgroundImage: advice_gen,
   },
   {
     id: 14,
@@ -203,8 +212,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/expenses-chart/main/src/images/screen1.png",
+    backgroundImage: chart,
   },
   {
     id: 15,
@@ -220,8 +228,7 @@ export default [
     },
     video:
       "https://drive.google.com/file/d/1FOYw_D_26gpm7vDVXSEzOB6aIYWpnNHY/preview",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/dropdown-challenge/main/src/images/screen1.png",
+    backgroundImage: dropdown,
   },
   {
     id: 16,
@@ -236,8 +243,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://raw.githubusercontent.com/rrich-kray/github-user-search/main/src/assets/screen1.png",
+    backgroundImage: gh_user_api,
   },
   {
     id: 17,
@@ -254,8 +260,7 @@ export default [
     },
     video:
       "https://drive.google.com/file/d/1uwmI0Kg_Q2ui-_egAREaEAxp_FUCxMVM/preview",
-    backgroundImage:
-      "https://github.com/rrich-kray/simple-react-site/blob/main/src/assets/images/screen.png?raw=true",
+    backgroundImage: react_landing_page,
   },
   {
     id: 19,
@@ -270,8 +275,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://github.com/rrich-kray/kanban-board-pwa/blob/main/src/assets/images/screen1.png?raw=true",
+    backgroundImage: kanban_pwa,
   },
   {
     id: 20,
@@ -296,8 +300,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://github.com/rrich-kray/full-stack-expenses-chart/blob/main/client/src/images/screen1.png?raw=true",
+    backgroundImage: chart_fs,
   },
   {
     id: 21,
@@ -314,8 +317,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://github.com/rrich-kray/interactive-comments-section/blob/main/screen1.png?raw=true",
+    backgroundImage: comments_section,
   },
   {
     id: 22,
@@ -330,8 +332,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://github.com/rrich-kray/coding-quiz-pro/blob/main/src/screen1.png?raw=true",
+    backgroundImage: coding_quiz_pro,
   },
   {
     id: 23,
@@ -356,8 +357,7 @@ export default [
       gallery: [],
     },
     video: "",
-    backgroundImage:
-      "https://github.com/rrich-kray/kanban-board-full-stack/blob/main/screen1.png?raw=true",
+    backgroundImage: kanban,
   },
   {
     id: 24,
@@ -409,7 +409,7 @@ export default [
       "Next.js application that allows users to search for recipes using over 75 search criteria.",
     info: {
       description:
-        "Recipes utilizes the Spoonacular Recipes API to allow users to search for recipes using over 75 search criteria. All things considered, this project took much longer to get to the MVP stage than I had anticipated for a simple recipe search app, as I wanted to use it as an opportunity to gain familiarity with several new technologies, including TypeScript, Python and AWS Lambda, as well as learn a few new frontend tricks. In the future, I hope to extend this with its own server that provides user authentication capabilities so that users can create their own accounts.",
+        "Recipes utilizes the Spoonacular Recipes API to allow users to search for recipes using over 75 search criteria. All things considered, this project took much longer to get to the MVP stage than I had anticipated for a simple recipe search app, as I wanted to use it as an opportunity to gain familiarity with several new technologies, including TypeScript, Python and AWS Lambda, as well as learn a few new frontend tricks. In the future, I hope to extend this with its own server that provides user authentication capabilities.",
       technologies: [
         "Next",
         "React",
@@ -430,9 +430,9 @@ export default [
     id: 27,
     name: "Photo Gallery",
     ghRepository: "https://github.com/rrich-kray/photo-gallery-client",
-    deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/login",
+    deploymentLink: "https://photo-gallery-client-rrich.herokuapp.com/",
     summary:
-      "Web application that allows users to login/signup and upload photos to their personal gallery.",
+      "Photo gallery allows users to login/signup and upload photos to a personal gallery.",
     info: {
       description:
         "The frontend utilizes React, and React Router DOM allows users to navigate among the pages. In its current build, this only includes login/signup pages for unauthenticated users, and a dashboard page for authenticated users. JSON web tokens are used to for authentication. Files are uploaded to a single directory within the server using the fileUpload middleware. Images and Users and kept in seperate Sequelize tables and are linked via a foreign keys.",

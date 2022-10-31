@@ -1,0 +1,6 @@
+.projects2 {
+    height: calc(100vh - 50px);
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden   
+}

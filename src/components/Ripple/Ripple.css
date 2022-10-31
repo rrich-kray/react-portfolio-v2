@@ -1,0 +1,6 @@
+.ripple {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw
+}
