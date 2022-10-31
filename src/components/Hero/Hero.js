@@ -95,11 +95,17 @@ function Earth() {
   const earthSpecTexture = new THREE.TextureLoader().load(earthSpec);
 
   useFrame((state, delta) => {
-    ref.current.rotation.x += delta / 10;
+    ref.current.rotation.x += delta / 20;
   });
 
   return (
-    <mesh castShadow receiveShadow ref={ref} position={[0, -3.75, 2.5]}>
+    <mesh
+      castShadow
+      receiveShadow
+      ref={ref}
+      position={[0, -3.75, 2.5]}
+      rotation={[0, 5, 0]}
+    >
       <ambientLight intensity={2} />
       <sphereGeometry attach="geometry" args={[4, 64, 64]} />
       <meshPhongMaterial
@@ -114,7 +120,7 @@ function Earth() {
   );
 }
 
-const Hero = () => {
+const Hero = ({ changeActivePage }) => {
   const canvasRef = useRef();
 
   return (
@@ -125,17 +131,17 @@ const Hero = () => {
         </div>
       </div> */}
       <div id="hero-container-right">
-        <div
-          style={{
-            position: "absolute",
-            top: "10%",
-            left: "28.5%",
-            height: "250px",
-            width: "1000px",
-            zIndex: 999,
-          }}
-        >
-          <h1>Let's Build Something Great</h1>
+        <div className="hero-cto-container">
+          <div
+            style={{
+              zIndex: 999,
+            }}
+          >
+            <h1>Let's Build Something Great</h1>
+          </div>
+          <button onClick={() => changeActivePage("projects")}>
+            Learn More
+          </button>
         </div>
 
         <Canvas
@@ -152,15 +158,6 @@ const Hero = () => {
           {/* <ambientLight intensity={0.5} /> */}
           {/* <directionalLight intensity={0.3} position={[5, 25, 20]} /> */}
           <Suspense fallback={null}>
-            {/* <Stage
-              environment="city"
-              contactShadow
-              intensity={1}
-              position={[0, 0, 0]}
-              adjustCamera={false}
-              preset="rembrandt"
-            > */}
-            {/* </Stage> */}
             <Stars
               radius={100}
               depth={50}

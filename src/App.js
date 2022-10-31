@@ -13,6 +13,7 @@ import ProjectsRedux from "./components/ProjectsRedux/ProjectsRedux";
 import ThreeNav from "./components/ThreeNav/ThreeNav";
 import ThreeProject from "./components/ThreeProjects/ThreeProjects";
 import ThreeAbout from "./components/ThreeAbout/ThreeAbout";
+import Projects2 from "./components/projects2/projects2";
 
 function App() {
   // Clicking on tile will set isPostActive to true, and also set activePost to the content of that post
@@ -24,10 +25,10 @@ function App() {
   function renderPage() {
     switch (activePage) {
       case "home":
-        return <Hero />;
+        return <Hero changeActivePage={changeActivePage} />;
         break;
       case "projects":
-        return <ThreeProject />;
+        return <Projects2 />;
         break;
       case "about":
         return <ThreeAbout />;
@@ -50,7 +51,10 @@ function App() {
       ) : (
         <div className="wrapper">
           <div id="app">
-            <ThreeNav />
+            <ThreeNav
+              activePage={activePage}
+              changeActivePage={changeActivePage}
+            />
             {activePost.length !== 0 ? (
               <ProjectPage
                 projectData={activePost}

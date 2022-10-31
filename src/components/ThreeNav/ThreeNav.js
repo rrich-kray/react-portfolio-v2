@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ThreeNav.css";
 
-function ThreeNav({ changeActivePage }) {
+function ThreeNav({ activePage, changeActivePage }) {
   return (
     <div className="three-nav">
       <div className="three-nav-links">

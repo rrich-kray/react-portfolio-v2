@@ -55,9 +55,28 @@
     animation-delay: 2s;
 }
 
-#hero-container-right :nth-child(1) {
-    height: 100%;
-    width: 100%
+.hero-cto-container {
+    height: 250px;
+    padding: 50px;
+    background: rgba(100, 100, 100, 0.25);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+}
+
+.hero-cto-container button {
+    margin-top: 20px;
+    background: none;
+    /* border: none; */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    color: white
 }
 
 #hero-container-right h1 {
@@ -66,18 +85,10 @@
     -webkit-text-fill-color: transparent;
     margin: 0;
     padding: 0;
-    font-size: 4em;
-    font-weight: 750;
+    font-size: 3em;
+    font-weight: 1000;
     letter-spacing: -0.025em;
-    position: absolute;
-    top: 20%;
-    right: 0;
-    margin-right: auto;
-    left: 0;
-    margin-left: auto;
-    height: 250px;
-    width: 1000px;
-    z-index: 999;
+    text-align: center
 }
 
 @keyframes fadeIn {
