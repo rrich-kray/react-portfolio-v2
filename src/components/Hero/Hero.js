@@ -45,11 +45,11 @@ function Earth() {
       castShadow
       receiveShadow
       ref={ref}
-      position={[0, -1.9, 4]}
+      position={[0, -0.75, 4]}
       rotation={[0, 7, 0]}
     >
       <ambientLight intensity={2} />
-      <sphereGeometry attach="geometry" args={[1, 128, 128]} />
+      <sphereGeometry attach="geometry" args={[0.5, 128, 128]} />
       <meshPhongMaterial
         map={earthTexture}
         bumpMap={earthBumpTexture}
