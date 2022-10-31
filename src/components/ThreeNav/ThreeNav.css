@@ -1,0 +1,30 @@
+.three-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    z-index: 999
+}
+
+.three-nav-links {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.three-nav-button {
+    height: 100%;
+    width: 75px;
+    background: none;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    color: white
+}
+
