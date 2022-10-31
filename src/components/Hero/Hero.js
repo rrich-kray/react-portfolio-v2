@@ -37,7 +37,7 @@ function Earth() {
   const earthSpecTexture = new THREE.TextureLoader().load(earthSpec);
 
   useFrame((state, delta) => {
-    ref.current.rotation.x += delta / 20;
+    ref.current.rotation.x += delta / 25;
   });
 
   return (
@@ -46,10 +46,10 @@ function Earth() {
       receiveShadow
       ref={ref}
       position={[0, -1.9, 4]}
-      rotation={[0, 5, 0]}
+      rotation={[0, 7, 0]}
     >
       <ambientLight intensity={2} />
-      <sphereGeometry attach="geometry" args={[2, 32, 32]} />
+      <sphereGeometry attach="geometry" args={[1, 128, 128]} />
       <meshPhongMaterial
         map={earthTexture}
         bumpMap={earthBumpTexture}
