@@ -4,7 +4,7 @@ import { Canvas, extend, useFrame } from "@react-three/fiber";
 import { OrbitControls, softShadows, Stars } from "@react-three/drei";
 import { UnrealBloomPass } from "three-stdlib";
 import * as THREE from "three";
-import earth from "./map.jpg";
+import earth from "./map_4k.jpg";
 import earthBump from "./earth_bump.jpg";
 import earthSpec from "./earthspec.jpg";
 
@@ -49,7 +49,7 @@ function Earth() {
       rotation={[0, 7, 0]}
     >
       <ambientLight intensity={2} />
-      <sphereGeometry attach="geometry" args={[0.5, 128, 128]} />
+      <sphereGeometry attach="geometry" args={[1, 128, 128]} />
       <meshPhongMaterial
         map={earthTexture}
         bumpMap={earthBumpTexture}
