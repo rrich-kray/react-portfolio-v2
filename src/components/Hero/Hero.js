@@ -4,9 +4,9 @@ import { Canvas, extend, useFrame } from "@react-three/fiber";
 import { OrbitControls, softShadows, Stars } from "@react-three/drei";
 import { UnrealBloomPass } from "three-stdlib";
 import * as THREE from "three";
-import earth from "./map.jpg";
-import earthBump from "./earth_bump.jpg";
-import earthSpec from "./earthspec.jpg";
+import earth from "./map_4k.jpg";
+import earthBump from "./earth_bump2.jpg";
+import earthSpec from "./water_4k.png";
 
 extend({ UnrealBloomPass });
 
