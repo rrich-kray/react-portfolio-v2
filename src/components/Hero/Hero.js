@@ -45,8 +45,8 @@ function Earth() {
       castShadow
       receiveShadow
       ref={ref}
-      position={[0, -0.75, 4]}
-      rotation={[0, 7, 0]}
+      position={[0, -0.885, 4.3]}
+      rotation={[0, 15, 0]}
     >
       <ambientLight intensity={2} />
       <sphereGeometry attach="geometry" args={[1, 128, 128]} />

@@ -28,10 +28,10 @@ function App() {
         return <Hero changeActivePage={changeActivePage} />;
         break;
       case "projects":
-        return <Projects2 />;
+        return <Projects />;
         break;
       case "about":
-        return <ThreeAbout />;
+        return <AboutRedux />;
       default:
         return <Hero />;
         break;
@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 5000);
   });
 
   return (

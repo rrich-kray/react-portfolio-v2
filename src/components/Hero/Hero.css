@@ -56,8 +56,8 @@
 }
 
 .hero-cta-container {
-    height: 250px;
-    padding: 50px;
+    height: 225px;
+    padding: 30px;
     background: rgba(100, 100, 100, 0.25);
     border-radius: 12px;
     backdrop-filter: blur(12px);
